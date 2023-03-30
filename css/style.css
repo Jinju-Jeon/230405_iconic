@@ -32,11 +32,16 @@ picture {
     height: auto;
 }
 
+
+/* webkit 설정 */
 input::-webkit-search-decoration,
 input::-webkit-search-cancel-button,
 input::-webkit-search-results-button,
 input::-webkit-search-results-decoration{
     display:none;
+}
+.nav_mobile>div::-webkit-scrollbar{
+    display: none;
 }
 
 
