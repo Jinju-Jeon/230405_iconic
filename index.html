@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=2.0,  user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Iconic</title>
+</head>
+
+<body>
+
+    <div class="lnb_pc pconly">
+        <div class="lnb_inner">
+            <div class="lnb_sns">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <nav class="user_lnb">
+                <ul>
+                    <li>JOIN</li>
+                    <li>LOGIN</li>
+                    <li>MYPAGE</li>
+                    <li>ORDER</li>
+                </ul>
+            </nav>
+        </div><!-- ///lnb_inner -->
+    </div><!-- ///lnb_pconly -->
+
+    <header class="header">
+        <div class="header_inner">
+            <div class="logo">
+                <img src="./img/logo.png" alt="iconic_logo">
+            </div>
+
+            <div class="pconly gnb_outer">
+                <div class="main_gnb">
+                    <nav class="gnb_pc">
+                        <ul>
+                            <li>collection</li>
+                            <li>stationery</li>
+                            <li>decoration</li>
+                            <li>fashion</li>
+                            <li>travel</li>
+                            <li>iconic</li>
+                            <li>board</li>
+                        </ul>
+                    </nav><!-- ////gnb_pconly -->
+                    <div class="search_cover">
+                        <input type="search" id="#header_search" class="header_search">
+                        <button class="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    
+                <label for="gnb_detail"><i class="fas fa-bars"></i></label>
+                </div><!-- ////main_gnb -->
+
+                <!-- 여기에! 카테고리 넣기(z-index 999쯤) -->
+
+            </div>
+
+            <div class="icon  mobonly">
+                <i class="fas fa-search"></i>
+                <i class="fas fa-shopping-cart"></i>
+                <label for="nav_mobile_chk"><i class="fas fa-bars"></i></label>
+            </div>
+
+            <!-- ////header_inner -->
+
+    </header><!-- ////header -->
+
+
+    <input type="checkbox" id="nav_mobile_chk">
+    <nav class="nav_mobile mobonly">
+        <label for="nav_mobile_chk"></label>
+        <div class="nav_inner">
+            <!-- gnb checkbox -->
+            <input type="checkbox" id="btn_collection">
+            <input type="checkbox" id="btn_stationery">
+            <input type="checkbox" id="btn_decoration">
+            <input type="checkbox" id="btn_fashion">
+            <input type="checkbox" id="btn_travel">
+            <input type="checkbox" id="btn_iconic">
+            <input type="checkbox" id="btn_board">
+            <!-- ////gnb checkbox -->
+
+            <ul class="lnb_mobile">
+                <li><a href="#">JOIN</a></li>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">MYPAGE</a></li>
+                <li><a href="#">ORDER</a></li>
+            </ul>
+
+            <ul class="gnb_mobile">
+                <li>
+                    <a href="#">COLLECTION
+                        <label for="btn_collection" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_collection" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">NEW</a></li>
+                        <li><a href="#">SEASON</a></li>
+                        <li><a href="#">SALE</a></li>
+                        <li><a href="#">BEST</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">STATIONERY
+                        <label for="btn_stationery" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_stationery" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">diary&planner</a></li>
+                        <li><a href="#">notebook&memo</a></li>
+                        <li><a href="#">album&recordbook</a></li>
+                        <li><a href="#">card&letter</a></li>
+                        <li><a href="#">pen&pencil case</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">DECORATION
+                        <label for="btn_decoration" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_decoration" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">Sticker</a></li>
+                        <li><a href="#">stamp</a></li>
+                        <li><a href="#">tape</a></li>
+                        <li><a href="#">gift wrapping</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">FASHION
+                        <label for="btn_fashion" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_fashion" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">wallet</a></li>
+                        <li><a href="#">pouch</a></li>
+                        <li><a href="#">fashion accesory</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">TRAVEL
+                        <label for="btn_travel" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_travel" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">pouch</a></li>
+                        <li><a href="#">travel accessory</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ICONIC
+                        <label for="btn_iconic" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_iconic" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">identity</a></li>
+                        <li><a href="#">offline store</a></li>
+                        <li><a href="#">overseas store</a></li>
+                        <li><a href="#">B2B</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">BOARD
+                        <label for="btn_board" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_board" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">REVIEW</a></li>
+                        <li><a href="#">Q&A</a></li>
+                    </ul>
+                </li>
+            </ul><!-- ////gnb_mobile -->
+
+            <div class="m_nav_sns">
+                <a href="https://www.instagram.com/iconic_story/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/iconicstory" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+
+
+
+
+
+
+
+
+        </div><!-- ///nav_inner -->
+    </nav><!-- ////nav_mobile -->
+
+
+
+    <div class="visual_main">
+        <div class="slider">
+            <div>
+                <picture>
+                    <source media="(min-width: 601px)" srcset="./img/main1.jpg">
+                    <img src="./img/mobile_main1.jpg" alt="main1">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source media="(min-width: 601px)" srcset="./img/main2.jpg">
+                    <img src="./img/mobile_main2.jpg" alt="main2">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source media="(min-width: 601px)" srcset="./img/main3.jpg">
+                    <img src="./img/mobile_main3.jpg" alt="main3">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source media="(min-width: 601px)" srcset="./img/main4.jpg">
+                    <img src="./img/mobile_main4.jpg" alt="main4">
+                </picture>
+            </div>
+            <div>
+                <picture>
+                    <source media="(min-width: 601px)" srcset="./img/main5.jpg">
+                    <img src="./img/mobile_main5.jpg" alt="main5">
+                </picture>
+            </div>
+
+
+        </div> <!-- ////slider -->
+    </div><!-- ////visual_main -->
+
+    <section class="new">
+        <h1>NEW PRODUCT</h1>
+        <div class="slider">
+            <div>
+                <!-- page1 -->
+                <div class="product">
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/new1.jpg" alt="new1">
+                            </div>
+                            <p class="product_name">듀얼 펜케이스</p>
+                            <p class="orig_price">7,000원</p>
+                            <div class="detail_bottom">
+                                <p class="price">6,300원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/new2.jpg" alt="new2">
+                            </div>
+                            <p class="product_name">콜렉트 4×6 네컷앨범</p>
+                            <p class="orig_price">7,000원</p>
+                            <div class="detail_bottom">
+                                <p class="price">6,300원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/new3.jpg" alt="new3">
+                            </div>
+                            <p class="product_name">슈가 다이컷 마스킹 테이프</p>
+                            <p class="orig_price">7,000원</p>
+                            <div class="detail_bottom">
+                                <p class="price">6,300원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/new4.jpg" alt="new4">
+                            </div>
+                            <p class="product_name">다꾸 배경 메모지</p>
+                            <p class="orig_price">7,000원</p>
+                            <div class="detail_bottom">
+                                <p class="price">6,300원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <!-- page2 -->
+                <div class="product">
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/new5.jpg" alt="new5">
+                            </div>
+                            <p class="product_name">수베니어 B6 라인 양장노트</p>
+                            <p class="orig_price">10,000원</p>
+                            <div class="detail_bottom">
+                                <p class="price">8,300원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/new6.jpg" alt="new6">
+                            </div>
+                            <p class="product_name">콜렉트 스티커팩</p>
+                            <p class="orig_price">6,200원</p>
+                            <div class="detail_bottom">
+                                <p class="price">5,580원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/new7.jpg" alt="new7">
+                            </div>
+                            <p class="product_name">두들 먼슬리 플래너</p>
+                            <p class="orig_price">7,000원</p>
+                            <div class="detail_bottom">
+                                <p class="price">6,300원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/new8.jpg" alt="new8">
+                            </div>
+                            <p class="product_name">아카이브 2단 콜북</p>
+                            <p class="orig_price">13,000원</p>
+                            <div class="detail_bottom">
+                                <p class="price">9,100원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div><!-- ////product -->
+            </div><!-- page2 -->
+        </div>
+        <p class="more"><a href="#">+More</a></p>
+    </section><!-- ////new -->
+
+    <section class="best">
+        <h1>BEST</h1>
+        <div class="slider">
+            <div>
+                <!-- page1 -->
+                <div class="product">
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/best1.jpg" alt="new1">
+                            </div>
+                            <p class="product_name">플레인 시크릿 파우치 v.2</p>
+                            <p class="orig_price">6,800원</p>
+                            <div class="detail_bottom">
+                                <p class="price">4,700원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div><!-- ////detail_bottom -->
+                        </a>
+                    </div><!-- ////detail -->
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/best2.jpg" alt="new2">
+                            </div>
+                            <p class="product_name">코트니 그랜드 펜파우치</p>
+                            <p class="orig_price">16,000원</p>
+                            <div class="detail_bottom">
+                                <p class="price">12,800원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/best3.jpg" alt="new3">
+                            </div>
+                            <p class="product_name">타이니 리무버블 스티커</p>
+                            <p class="orig_price">1,500원</p>
+                            <div class="detail_bottom">
+                                <p class="price">1,350원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/best4.jpg" alt="new4">
+                            </div>
+                            <p class="product_name">컬러트윈펜</p>
+                            <p class="orig_price">5,400원</p>
+                            <div class="detail_bottom">
+                                <p class="price">3,780원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div><!-- ////product -->
+            </div><!-- page1 -->
+
+            <div>
+                <!-- page2 -->
+                <div class="product">
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/best5.jpg" alt="new5">
+                            </div>
+                            <p class="product_name">캘리 알파벳 숫자 스티커팩</p>
+                            <p class="orig_price">6,800원</p>
+                            <div class="detail_bottom">
+                                <p class="price">6,120원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/best6.jpg" alt="new6">
+                            </div>
+                            <p class="product_name">베이직 라인노트</p>
+                            <p class="orig_price">1,800원</p>
+                            <div class="detail_bottom">
+                                <p class="price">1,440원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/best7.jpg" alt="new7">
+                            </div>
+                            <p class="product_name">냥이 다이어리 스탬프</p>
+                            <p class="orig_price">4,200원</p>
+                            <div class="detail_bottom">
+                                <p class="price">3,780원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="detail">
+                        <a href="#">
+                            <div class="img">
+                                <div class="whiteover"></div>
+                                <img src="./img/best8.jpg" alt="new8">
+                            </div>
+                            <p class="product_name">B5 버디 노트패드</p>
+                            <p class="orig_price">3,500원</p>
+                            <div class="detail_bottom">
+                                <p class="price">2,800원</p>
+                                <p class="icon">
+                                    <i class="far fa-heart"></i>
+                                    <i class="fas fa-cart-plus"></i>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div><!-- ////product -->
+            </div><!-- page2 -->
+
+        </div><!-- ////slider -->
+        <p class="more"><a href="#">+More</a></p>
+    </section><!-- ////best -->
+
+    <section class="season">
+        <h1>VACATION</h1>
+        <div class="season_list">
+            <div class="season_inner1">
+                <div class="img">
+                    <a href="#">
+                        <picture>
+                            <source media="(min-width: 601px) and (max-width:1023px)" srcset="./img/va1_tablet.jpg">
+                            <img src="./img/va1.jpg" alt="vacation1">
+                        </picture>
+                    </a>
+                </div>
+                <div class="img mobonly">
+                    <a href="#"><img src="./img/va2.jpg" alt="vacation2"></a>
+                </div>
+            </div><!-- ////inner1 -->
+            <div class="season_inner2">
+                <div class="img tablet"><a href="#"><img src="./img/va2.jpg" alt="vacation2"></a></div>
+                <div class="img"><a href="#"><img src="./img/va3.jpg" alt="vacation3"></a></div>
+                <div class="img"><a href="#"><img src="./img/va4.jpg" alt="vacation4"></a></div>
+                <div class="img mob_last"><a href="#"><img src="./img/va5.jpg" alt="vacation5"></a></div>
+                <div class="img tablet"><a href="#"><img src="./img/va6.jpg" alt="vacation6"></a></div>
+                <div class="img tablet"><a href="#"><img src="./img/va7.jpg" alt="vacation7"></a></div>
+                <div class="img tablet"><a href="#"><img src="./img/va8.jpg" alt="vacation8"></a></div>
+                <div class="img tablet"><a href="#"><img src="./img/va9.jpg" alt="vacation9"></a></div>
+            </div><!-- ////inner2 -->
+        </div>
+
+        <p class="more"><a href="#">+More</a></p>
+
+    </section><!-- ////season -->
+
+    <section class="prom_item">
+        <h1>POUCH</h1>
+        <div class="item_list">
+            <div class="list_1 tablet">
+                <div class="img"><img src="./img/pouch1.jpg" alt="pouch1"></div>
+                <div class="img"><img src="./img/pouch2.jpg" alt="pouch2"></div>
+            </div>
+            <div class="list_2">
+                <div class="img mobonly"><img src="./img/pouch1.jpg" alt="pouch1"></div>
+                <div class="img mobonly"><img src="./img/pouch2.jpg" alt="pouch2"></div>
+                <div class="img"><img src="./img/pouch3.jpg" alt="pouch3"></div>
+                <div class="img"><img src="./img/pouch4.jpg" alt="pouch4"></div>
+                <div class="img"><img src="./img/pouch5.jpg" alt="pouch5"></div>
+                <div class="img"><img src="./img/pouch6.jpg" alt="pouch6"></div>
+            </div>
+
+        </div>
+        <p class="more"><a href="#">+More</a></p>
+    </section>
+
+    <section class="brand">
+        <div class="img">
+            <div class="blackover"></div>
+            <picture>
+                <source media="(min-width:980px)" srcset="./img/brand.jpg" alt="brand">
+                <source media="(min-width:830px)" srcset="./img/brand_tablet_1.jpg" alt="brand">
+                <source media="(min-width:702px)" srcset="./img/brand_tablet.jpg" alt="brand">
+                <img src="./img/brand_mobile.jpg" alt="brand">
+            </picture>
+        </div>
+
+        <div class="brand_txt">
+            <h1>BRAND STORY</h1>
+            <p>
+                아이코닉은 사용자의 상징(icon)이 되는 제품을 만듭니다.<br />
+                우리의 라이프스타일을 고스란히 담아내고 겉으로 드러나기 어려운 무형의 가치들을 제품 하나하나에 담아 사용자에게 돌려주고자 합니다.
+            </p>
+        </div>
+    </section><!-- ////brand -->
+
+    <div class="insta">
+        <div class="insta_inner">
+            <div class="account">
+                <div class="img">
+                    <img src="./img/sns_icon.jpg" alt="sns_icon">
+                </div>
+                <div class="account_txt">
+                    <p>#ICONIC_STORY</p>
+                    <p>@ICONIC_STORY</p>
+                </div>
+            </div>
+            <div class="insta_img">
+                <div class="img"><img src="./img/sns1.jpg" alt="sns1"></div>
+                <div class="img"><img src="./img/sns2.jpg" alt="sns2"></div>
+                <div class="img"><img src="./img/sns3.jpg" alt="sns3"></div>
+                <div class="img"><img src="./img/sns4.jpg" alt="sns4"></div>
+                <div class="img"><img src="./img/sns5.jpg" alt="sns5"></div>
+                <div class="img"><img src="./img/sns6.jpg" alt="sns6"></div>
+            </div>
+        </div>
+    </div><!-- ////insta -->
+
+    <footer class="footer">
+        <div class="f_top">
+            <div class="sns">
+                <h2>SNS</h2>
+                <div>
+                    <p><i class="fab fa-instagram"></i>iconic_story</p>
+                    <p><i class="fab fa-facebook-f"></i>iconicstory</p>
+                </div>
+            </div>
+            <div class="bank">
+                <h2>bank account</h2>
+                <div>
+                    <p>
+                        <span class="gray">국민은행</span>
+                        <span>491001-01-160496 ㈜아이코닉디자인</span>
+                    </p>
+                </div>
+            </div>
+            <div class="return">
+                <h2>returns & exchanges</h2>
+                <div>
+                    반품주소<br />
+                    서울특별시 중구 다산로 20길 35 (신당동)<br />
+                    아이코닉 물류센터
+                </div>
+            </div>
+            <div class="customer">
+                <h2>customer center</h2>
+                <p class="bold"><b>02-2231-1959</b></p>
+                <div class="gray">
+                    <p>
+                        <span class="ent">대량구매&B2B<br /></span>
+                        070-4404-4406<br />
+                        trade@icon-ic.com
+                    </p>
+                    <p>
+                        <span class="ent">OPEN </span> AM 10:00 - PM 5:00<br />
+                        <span class="ent">LUNCH </span> PM 12:00 - PM 1:00<br />
+                        <span class="ent">SAT, SUN, HOLIDAY </span> CLOSED
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="f_bottom gray">
+            <div class="f_bottom_inner">
+                <p>회사소개 | 이용안내 | 이용약관 | 개인정보처리방침</p>
+
+                <p>상호. (주)아이코닉디자인 | 대표. 김남현 | 이메일. master@icon-ic.com | 전화. 02-2231-1959 | 주소. 서울시 중구 다산로 20길 35
+                    아이코닉빌딩<br />
+                    사업자등록번호. 201-86-04923 (사업자정보확인) | 통신판매업신고번호. 2008-서울중구-0501호 | 개인정보보호책임자.
+                    김남현(noon@icon-ic.com)<br />
+                    고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. (서비스가입사실확인)</p>
+
+                <p>(주)아이코닉디자인. all right reserved. designed & managed by WISA.</p>
+            </div>
+        </div>
+    </footer><!-- ////footer -->
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.slider').slick({
+                //autoplay: true,
+                dots: true,
+                pauseOnDotsHover: true,
+            });
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>
