@@ -32,14 +32,14 @@
     </div><!-- ///lnb_pconly -->
 
     <header class="header">
+        <input type="checkbox" id="nav_mobile_chk">
         <div class="header_inner">
-            <div class="logo">
+                <div class="logo">
                 <img src="./img/logo.png" alt="iconic_logo">
-            </div>
+                </div>
 
-            
-            <div class="pconly gnb_outer">
                 <input type="checkbox" id="gnb_detail">
+                <div class="pconly gnb_outer">
                 <div class="main_gnb">
                     <nav class="gnb_pc">
                         <ul>
@@ -51,13 +51,14 @@
                             <li>iconic</li>
                             <li>board</li>
                         </ul>
-                    </nav><!-- ////gnb_pconly -->
+                    </nav><!-- ////gnb_pc -->
                     <div class="search_cover">
                         <input type="search" id="#header_search" class="header_search">
                         <button class="submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </div>
+
                     <div class="hover_content">
                         <div class="gnb_sub">
                             <div class="category_sub">
@@ -127,22 +128,23 @@
                     </div><!-- ////hover_content -->
 
                 </div><!-- ////main_gnb -->
-            </div>
-
-            <label for="gnb_detail" class="pconly"><i class="fas fa-bars"></i></label>
-
-            <div class="icon  mobonly">
-                <i class="fas fa-search"></i>
-                <i class="fas fa-shopping-cart"></i>
-                <label for="nav_mobile_chk"><i class="fas fa-bars"></i></label>
-            </div>
-
-            <!-- ////header_inner -->
-
-    </header><!-- ////header -->
+                </div><!-- ///gnb_outer -->
+                <label for="gnb_detail" class="pconly">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                </label>
 
 
-    <input type="checkbox" id="nav_mobile_chk">
+                <div class="icon  mobonly">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <label for="nav_mobile_chk">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                    </label>
+                </div><!-- icon mobonly -->
+        </div><!-- ////header_inner -->
+
     <nav class="nav_mobile mobonly">
         <label for="nav_mobile_chk"></label>
         <div class="nav_inner">
@@ -257,6 +259,9 @@
 
         </div><!-- ///nav_inner -->
     </nav><!-- ////nav_mobile -->
+
+    </header><!-- ////header -->
+
 
 
 
@@ -676,6 +681,7 @@
                 아이코닉은 사용자의 상징(icon)이 되는 제품을 만듭니다.<br />
                 우리의 라이프스타일을 고스란히 담아내고 겉으로 드러나기 어려운 무형의 가치들을 제품 하나하나에 담아 사용자에게 돌려주고자 합니다.
             </p>
+            <p><a href="#"><i class="fas fa-chevron-circle-right"></i></a></p>
         </div>
     </section><!-- ////brand -->
 
@@ -691,12 +697,24 @@
                 </div>
             </div>
             <div class="insta_img">
-                <div class="img"><img src="./img/sns1.jpg" alt="sns1"></div>
-                <div class="img"><img src="./img/sns2.jpg" alt="sns2"></div>
-                <div class="img"><img src="./img/sns3.jpg" alt="sns3"></div>
-                <div class="img"><img src="./img/sns4.jpg" alt="sns4"></div>
-                <div class="img"><img src="./img/sns5.jpg" alt="sns5"></div>
-                <div class="img"><img src="./img/sns6.jpg" alt="sns6"></div>
+                <div class="img">
+                    <div class="blackover"></div><img src="./img/sns1.jpg" alt="sns1">
+                </div>
+                <div class="img">
+                    <div class="blackover"></div><img src="./img/sns2.jpg" alt="sns2">
+                </div>
+                <div class="img">
+                    <div class="blackover"></div><img src="./img/sns3.jpg" alt="sns3">
+                </div>
+                <div class="img">
+                    <div class="blackover"></div><img src="./img/sns4.jpg" alt="sns4">
+                </div>
+                <div class="img">
+                    <div class="blackover"></div><img src="./img/sns5.jpg" alt="sns5">
+                </div>
+                <div class="img">
+                    <div class="blackover"></div><img src="./img/sns6.jpg" alt="sns6">
+                </div>
             </div>
         </div>
     </div><!-- ////insta -->
@@ -769,7 +787,7 @@
         $(document).ready(function () {
 
             $('.slider').slick({
-                //autoplay: true,
+                autoplay: true,
                 dots: true,
                 pauseOnDotsHover: true,
             });
