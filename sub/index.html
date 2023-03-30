@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=2.0,  user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Iconic</title>
+</head>
+
+<body>
+
+    <div class="lnb_pc pconly">
+        <div class="lnb_inner">
+            <div class="lnb_sns">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-instagram"></i>
+            </div>
+            <nav class="user_lnb">
+                <ul>
+                    <li>JOIN</li>
+                    <li>LOGIN</li>
+                    <li>MYPAGE</li>
+                    <li>ORDER</li>
+                </ul>
+            </nav>
+        </div><!-- ///lnb_inner -->
+    </div><!-- ///lnb_pconly -->
+
+    <header class="header">
+        <input type="checkbox" id="nav_mobile_chk">
+        <div class="header_inner">
+                <div class="logo">
+                <img src="./img/logo.png" alt="iconic_logo">
+                </div>
+
+                <input type="checkbox" id="gnb_detail">
+                <div class="pconly gnb_outer">
+                <div class="main_gnb">
+                    <nav class="gnb_pc">
+                        <ul>
+                            <li>collection</li>
+                            <li>stationery</li>
+                            <li>decoration</li>
+                            <li>fashion</li>
+                            <li>travel</li>
+                            <li>iconic</li>
+                            <li>board</li>
+                        </ul>
+                    </nav><!-- ////gnb_pc -->
+                    <div class="search_cover">
+                        <input type="search" id="#header_search" class="header_search">
+                        <button class="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="hover_content">
+                        <div class="gnb_sub">
+                            <div class="category_sub">
+                                <p class="c_title">collection</p>
+                                <ul>
+                                    <li>NEW</li>
+                                    <li>SEASON</li>
+                                    <li>SALE</li>
+                                    <li>BEST</li>
+                                </ul>
+
+                            </div>
+                            <div class="category_sub">
+                                <p class="c_title">stationery</p>
+                                <ul>
+                                    <li>diary<br />&Planner</li>
+                                    <li>Notebook<br />&Memo</li>
+                                    <li>Album<br />&recordbook</li>
+                                    <li>card&letter</li>
+                                </ul>
+                            </div>
+                            <div class="category_sub">
+                                <p class="c_title">decoration</p>
+                                <ul>
+                                    <li>Sticker</li>
+                                    <li>stamp</li>
+                                    <li>tape</li>
+                                    <li>gift wrapping</li>
+                                </ul>
+                            </div>
+                            <div class="category_sub">
+                                <p class="c_title">fashion</p>
+                                <ul>
+                                    <li>wallet</li>
+                                    <li>pouch</li>
+                                    <li>fashion<br />accesory</li>
+                                </ul>
+                            </div>
+                            <div class="category_sub">
+                                <p class="c_title">travel</p>
+                                <ul>
+                                    <li>bag</li>
+                                    <li>pouch</li>
+                                    <li>travel<br />accesory</li>
+                                </ul>
+                            </div>
+                            <div class="category_sub">
+                                <p class="c_title">iconic</p>
+                                <ul>
+                                    <li>identity</li>
+                                    <li>online</li>
+                                    <li>offline</li>
+                                </ul>
+                            </div>
+                            <div class="category_sub">
+                                <p class="c_title">board</p>
+                                <ul>
+                                    <li>news</li>
+                                    <li>review</li>
+                                    <li>q&a</li>
+                                </ul>
+                            </div>
+                        </div><!-- ////gnb_sub -->
+                        <div class="gnb_banner">
+                            <div class="img"><img src="./img/gnb_banner.jpg" alt=""></div>
+                        </div>
+                    </div><!-- ////hover_content -->
+
+                </div><!-- ////main_gnb -->
+                </div><!-- ///gnb_outer -->
+                <label for="gnb_detail" class="pconly">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
+                </label>
+
+
+                <div class="icon  mobonly">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                    <label for="nav_mobile_chk">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                    </label>
+                </div><!-- icon mobonly -->
+        </div><!-- ////header_inner -->
+
+    <nav class="nav_mobile mobonly">
+        <label for="nav_mobile_chk"></label>
+        <div class="nav_inner">
+            <!-- gnb checkbox -->
+            <input type="checkbox" id="btn_collection">
+            <input type="checkbox" id="btn_stationery">
+            <input type="checkbox" id="btn_decoration">
+            <input type="checkbox" id="btn_fashion">
+            <input type="checkbox" id="btn_travel">
+            <input type="checkbox" id="btn_iconic">
+            <input type="checkbox" id="btn_board">
+            <!-- ////gnb checkbox -->
+
+            <ul class="lnb_mobile">
+                <li><a href="#">JOIN</a></li>
+                <li><a href="#">LOGIN</a></li>
+                <li><a href="#">MYPAGE</a></li>
+                <li><a href="#">ORDER</a></li>
+            </ul>
+
+            <ul class="gnb_mobile">
+                <li>
+                    <a href="#">COLLECTION
+                        <label for="btn_collection" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_collection" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">NEW</a></li>
+                        <li><a href="#">SEASON</a></li>
+                        <li><a href="#">SALE</a></li>
+                        <li><a href="#">BEST</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">STATIONERY
+                        <label for="btn_stationery" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_stationery" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">diary&planner</a></li>
+                        <li><a href="#">notebook&memo</a></li>
+                        <li><a href="#">album&recordbook</a></li>
+                        <li><a href="#">card&letter</a></li>
+                        <li><a href="#">pen&pencil case</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">DECORATION
+                        <label for="btn_decoration" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_decoration" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">Sticker</a></li>
+                        <li><a href="#">stamp</a></li>
+                        <li><a href="#">tape</a></li>
+                        <li><a href="#">gift wrapping</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">FASHION
+                        <label for="btn_fashion" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_fashion" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">wallet</a></li>
+                        <li><a href="#">pouch</a></li>
+                        <li><a href="#">fashion accesory</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">TRAVEL
+                        <label for="btn_travel" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_travel" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">bag</a></li>
+                        <li><a href="#">pouch</a></li>
+                        <li><a href="#">travel accessory</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">ICONIC
+                        <label for="btn_iconic" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_iconic" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">identity</a></li>
+                        <li><a href="#">offline store</a></li>
+                        <li><a href="#">overseas store</a></li>
+                        <li><a href="#">B2B</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">BOARD
+                        <label for="btn_board" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
+                        <label for="btn_board" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                    </a>
+                    <ul>
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">REVIEW</a></li>
+                        <li><a href="#">Q&A</a></li>
+                    </ul>
+                </li>
+            </ul><!-- ////gnb_mobile -->
+
+            <div class="m_nav_sns">
+                <a href="https://www.instagram.com/iconic_story/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/iconicstory" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+
+
+
+
+
+
+
+
+        </div><!-- ///nav_inner -->
+    </nav><!-- ////nav_mobile -->
+
+    </header><!-- ////header -->
+
+
+
+
+
+
+    <footer class="footer">
+        <div class="f_top">
+            <div class="sns">
+                <h2>SNS</h2>
+                <div>
+                    <p><i class="fab fa-instagram"></i>iconic_story</p>
+                    <p><i class="fab fa-facebook-f"></i>iconicstory</p>
+                </div>
+            </div>
+            <div class="bank">
+                <h2>bank account</h2>
+                <div>
+                    <p>
+                        <span class="gray">국민은행</span>
+                        <span>491001-01-160496 ㈜아이코닉디자인</span>
+                    </p>
+                </div>
+            </div>
+            <div class="return">
+                <h2>returns & exchanges</h2>
+                <div>
+                    반품주소<br />
+                    서울특별시 중구 다산로 20길 35 (신당동)<br />
+                    아이코닉 물류센터
+                </div>
+            </div>
+            <div class="customer">
+                <h2>customer center</h2>
+                <p class="bold"><b>02-2231-1959</b></p>
+                <div class="gray">
+                    <p>
+                        <span class="ent">대량구매&B2B<br /></span>
+                        070-4404-4406<br />
+                        trade@icon-ic.com
+                    </p>
+                    <p>
+                        <span class="ent">OPEN </span> AM 10:00 - PM 5:00<br />
+                        <span class="ent">LUNCH </span> PM 12:00 - PM 1:00<br />
+                        <span class="ent">SAT, SUN, HOLIDAY </span> CLOSED
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="f_bottom gray">
+            <div class="f_bottom_inner">
+                <p>회사소개 | 이용안내 | 이용약관 | 개인정보처리방침</p>
+
+                <p>상호. (주)아이코닉디자인 | 대표. 김남현 | 이메일. master@icon-ic.com | 전화. 02-2231-1959 | 주소. 서울시 중구 다산로 20길 35
+                    아이코닉빌딩<br />
+                    사업자등록번호. 201-86-04923 (사업자정보확인) | 통신판매업신고번호. 2008-서울중구-0501호 | 개인정보보호책임자.
+                    김남현(noon@icon-ic.com)<br />
+                    고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 PG 사의 구매안전서비스를 이용하실 수 있습니다. (서비스가입사실확인)</p>
+
+                <p>(주)아이코닉디자인. all right reserved. designed & managed by WISA.</p>
+            </div>
+        </div>
+    </footer><!-- ////footer -->
+    </script>
+
+</body>
+
+</html>
