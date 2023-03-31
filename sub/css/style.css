@@ -614,18 +614,17 @@ button.submit{
 
 .item_list {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
+    overflow: hidden;
+    height: calc((50vw + 60px)*4 + 190px)
 }
 
-.item_list>div {
+.detail {
     width: calc((100% - 10px)/2);
-    margin-right: 10px;
     margin-bottom: 30px;
 }
 
-.item_list div:nth-child(2n) {
-    margin-right: 0;
-}
 
 .product_name {
     font-size: 18px;
@@ -675,6 +674,26 @@ button.submit{
 
 .detail_bottom .icon i.fa-cart-plus:hover {
     color: #777;
+}
+
+
+
+/* mp_btn */
+.mp_btn{
+    margin-top: 30px;
+    display: block;
+    width: 100%; height: 60px;
+    text-align: center; line-height: 60px;
+    border: 1px solid  #7D5A5A;
+    color: #7D5A5A;
+    box-sizing: border-box;
+}
+
+#mp_btn:checked ~ .item_list .mp_btn{
+    display: none;
+}
+#mp_btn:checked ~ .item_list{
+    height: auto;
 }
 
 
@@ -760,22 +779,17 @@ span.ent {
 
 
 @media all and (min-width:601px) {
+    .item_list{
+        height: auto;
+    }
+
+    .mp_btn{
+        display: none;
+    }
+
     .item_list>div {
         width: calc((100% - 20px)/3);
     }
-
-    .item_list div:nth-child(2n) {
-        margin-right: 10px;
-    }
-
-    .item_list div:nth-child(3n) {
-        margin-right: 0;
-    }
-
-
-
-
-
 
 
     html {
@@ -839,17 +853,7 @@ span.ent {
 
     .item_list>div {
         width: 280px;
-        margin-right: 20px;
         margin-bottom: 60px;
-    }
-
-    .item_list div:nth-child(2n),
-    .item_list div:nth-child(3n) {
-        margin-right: 20px;
-    }
-
-    .item_list div:nth-child(4n) {
-        margin-right: 0;
     }
 
     .mobonly {
