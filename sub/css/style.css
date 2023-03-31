@@ -445,6 +445,7 @@ button.submit{
 
 .hover_content{
     position: absolute;
+    z-index: -1;
     overflow: hidden;
     width: 950px; height: 200px;
     top: 65px; left: 10px;
@@ -551,16 +552,26 @@ button.submit{
 }
 
 .now_page{
-    margin-top: 40px;
+    margin: 40px auto;
+    overflow: hidden;
 }
 .now_page h1{
     color: #333;
+    margin-bottom: 20px;
+}
+
+.list_cover{
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .now_list{
     display: flex;
     overflow-x: scroll;
     color: #7D5A5A;
+    margin-right: 10px;
 }
 .now_list li{
     text-transform: capitalize;
@@ -589,8 +600,83 @@ button.submit{
 }
 
 .now_page select{
+    margin-left: auto;
+    position: relative;
     outline: none;
+    margin-top: 7.5px;
+    height: 25px; line-height: 25px;
+    padding-right: 80px;
 }
+
+
+
+/* item */
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item>div {
+    width: calc((100% - 10px)/2);
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.item div:nth-child(2n) {
+    margin-right: 0;
+}
+
+.product_name {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: "IMB Plex Sans KR";
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.orig_price {
+    font-size: 12px;
+    color: #F1D1D1;
+    text-decoration: line-through;
+}
+
+.detail_bottom {
+    overflow: hidden;
+}
+
+.detail_bottom .price {
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #7D5A5A;
+    font-size: 16px;
+}
+
+.detail_bottom .icon {
+    float: right;
+}
+
+.detail_bottom .icon i {
+    float: left;
+    display: block;
+    font-size: 24px;
+    transition: .2s;
+}
+
+.detail_bottom .icon i.fa-heart {
+    margin-right: 20px;
+}
+
+.detail_bottom .icon i.fa-heart:hover {
+    color: rgb(255, 116, 123);
+}
+
+.detail_bottom .icon i.fa-cart-plus:hover {
+    color: #777;
+}
+
 
 
 
@@ -676,6 +762,24 @@ span.ent {
 
 
 @media all and (min-width:601px) {
+    .item>div {
+        width: calc((100% - 20px)/3);
+    }
+
+    .item div:nth-child(2n) {
+        margin-right: 10px;
+    }
+
+    .item div:nth-child(3n) {
+        margin-right: 0;
+    }
+
+
+
+
+
+
+
     html {
         font-size: 14px;
     }
@@ -728,7 +832,38 @@ span.ent {
 
 /* media 601px~ */
 
+
 @media all and (min-width:1200px) {
+    
+    .now_page {
+        margin-bottom: 100px;
+}
+
+    .item>div {
+        width: 280px;
+        margin-right: 20px;
+        margin-bottom: 60px;
+    }
+
+    .item div:nth-child(2n),
+    .item div:nth-child(3n) {
+        margin-right: 20px;
+    }
+
+    .item div:nth-child(4n) {
+        margin-right: 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
     .mobonly {
         display: none;
     }
