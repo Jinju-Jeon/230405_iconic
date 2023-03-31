@@ -546,7 +546,7 @@ button.submit{
 /* 본문 */
 
 /* now_page */
-.now{
+.now.now{
     background-color: #7D5A5A; color: #fff;
     border-right: none;
 }
@@ -612,18 +612,18 @@ button.submit{
 
 /* item */
 
-.item {
+.item_list {
     display: flex;
     flex-wrap: wrap;
 }
 
-.item>div {
+.item_list>div {
     width: calc((100% - 10px)/2);
     margin-right: 10px;
     margin-bottom: 30px;
 }
 
-.item div:nth-child(2n) {
+.item_list div:nth-child(2n) {
     margin-right: 0;
 }
 
@@ -676,8 +676,6 @@ button.submit{
 .detail_bottom .icon i.fa-cart-plus:hover {
     color: #777;
 }
-
-
 
 
 
@@ -762,15 +760,15 @@ span.ent {
 
 
 @media all and (min-width:601px) {
-    .item>div {
+    .item_list>div {
         width: calc((100% - 20px)/3);
     }
 
-    .item div:nth-child(2n) {
+    .item_list div:nth-child(2n) {
         margin-right: 10px;
     }
 
-    .item div:nth-child(3n) {
+    .item_list div:nth-child(3n) {
         margin-right: 0;
     }
 
@@ -839,30 +837,20 @@ span.ent {
         margin-bottom: 100px;
 }
 
-    .item>div {
+    .item_list>div {
         width: 280px;
         margin-right: 20px;
         margin-bottom: 60px;
     }
 
-    .item div:nth-child(2n),
-    .item div:nth-child(3n) {
+    .item_list div:nth-child(2n),
+    .item_list div:nth-child(3n) {
         margin-right: 20px;
     }
 
-    .item div:nth-child(4n) {
+    .item_list div:nth-child(4n) {
         margin-right: 0;
     }
-
-
-
-
-
-
-
-
-
-
 
     .mobonly {
         display: none;
@@ -926,7 +914,22 @@ span.ent {
         position: relative;
         z-index: 9999;
     }
-
+    
+    .page_number{
+        display: flex;
+        justify-content: center;
+    }
+    .page_number>div{
+        width: 25px; height: 25px;
+        text-align: center; line-height: 25px;
+        margin-right: 10px;
+        border: 1px solid #7D5A5A;
+        color: #7D5A5A;
+    }
+    .page_number>div:last-child{
+        margin-right: none;
+    }
+    
 
 
 
