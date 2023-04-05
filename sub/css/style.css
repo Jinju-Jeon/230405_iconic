@@ -83,9 +83,10 @@ h2 {
 
 }
 
-a {
-    display: block;
-}
+
+a {display: block;}
+p a {display: inline;}
+li a:hover{color: #7D5A5A;}
 
 .gray {
     color: #aaa;
@@ -709,8 +710,7 @@ span.ent {
 /* media 601px~ */
 
 
-
-@media all and (min-width:990px){
+@media all and (min-width:1000px){
     .pconly {
         display: block;
     }
@@ -734,6 +734,7 @@ span.ent {
         justify-content: space-between;
         align-items: center;
     }
+    .lnb_sns a {display: inline;}
 
     .lnb_sns i {
         width: 30px;
@@ -758,104 +759,97 @@ span.ent {
     .i_cov1{display: none;}
 
     .pc_gnb{
-        width: 710px;
-        height: 60px; line-height: 60px;
-        padding: 0 10px;
-        margin-right: auto;
-        box-sizing: border-box;
+        width: 720px; height: 60px;
+        margin-right: 10px;
 
         display: flex;
         justify-content: space-between;
-        
+
+    }
+
+    .pc_gnb li a{  
+        box-sizing: border-box;
+        padding: 0 5px;
+
+        text-align: center; line-height: 60px;
+
+        font-family: "IMB Plex Sans KR";
+        font-weight: bold;
+        font-size: 16px;
         text-transform: uppercase;
     }
 
-    .pc_gnb li{
-        flex-grow: 1;
-        font-family: 'IBM Plex Sans KR';
-        font-weight: 600;
-    }
-    .pc_gnb li::before{
+    .c_title::before,
+    .pc_gnb li a::before{
         content: "+";
-        margin-right: 3px;
     }
 
+    .c_title{
+        box-sizing: border-box;
+        padding: 0 5px;
+
+        text-align: center;
+        line-height: 0px; opacity: 0;
+
+        font-family: "IMB Plex Sans KR";
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+
+
     .hover_content{
-        z-index: -1;
-        position: absolute;
-        top: 60px; left: 180px;
-        height: 0px;
+        width: 720px;
+        height: 60px;
+
         overflow: hidden;
         transition: .3s;
+
+        position: absolute;
+        top: 0px; left: 185px;
+        z-index: -1;
     }
 
     .hover_inner{
-        width: 710px; height: 200px;
+        display: flex;
         position: relative;
-        top: 5px;
+        top: 65px;
         background-color: #fff;
-        
-    }
-
-    .category_sub{
-        flex-grow: 1;
-        transition: .3s;
     }
 
     .gnb_sub{
-        width: 710px; height: 200px; box-sizing: border-box;
-        
-
+        width: 720px;
         display: flex;
-        justify-content: space-between;
-
-        background-color: #fff;
-        text-transform: capitalize;
+        justify-content: space-between
     }
 
-    p.c_title{
-        padding-right: 7px;
-        opacity: 0; line-height: 0;
-        text-transform: uppercase;
-        font-family: 'IBM Plex Sans KR';
-        font-weight: 600;
-
-    }
-    p.c_title::before{
-        content: "+";
-        margin-right: 3px;
-    }
-
-    .gnb_sub li{
-        padding: 5px 0 5px 7px;
-    }
-
-    .gnb_sub>.category_sub:first-child{
-        padding-left: 10px;
-    }
-    .gnb_sub>.category_sub:last-child{
-        padding-right: 10px;
-    }
-
-
-    .pc_gnb:hover ~ .hover_content,
-    .hover_content:hover,
-    #pc_btn:checked ~ .header .hover_content{
-        height: 205px;
+    .category_sub{
+        box-sizing: border-box;
+        padding-left: 5px;
+        height: 200px;
+        transition: .3s;
     }
 
     .category_sub:hover{
         background-color: #eee;
     }
-    
+
+
+    .gnb_sub a{
+        text-transform: capitalize;
+        padding: 5px;
+    }
+
+
+    #pc_btn:checked ~ .header .hover_content,
+    .pc_gnb:hover ~ .hover_content,
+    .hover_content:hover{
+        height: 265px;
+    }
     
     #pc_btn:checked ~ .header .fa-bars{display: none;}
     #pc_btn:checked ~ .header .fa-times{display: inline;}
-
-
-
-
-
 
     /* page */
     .page_number{
@@ -885,10 +879,6 @@ span.ent {
         display: none;
     }
 
-    .logo{
-        margin-right: 20px;
-    }
-
     .header_inner{
         width: 1180px;
         margin: 0 auto;
@@ -916,14 +906,17 @@ span.ent {
         margin-right: 20px;
     }
 
-    .search_cover i{
-        position: absolute;
-        left: 10px;
-        font-size: 18px;
+    .search_submit{
+        background: none;
 
-        text-align: center;
+        width: 40px;
         line-height: 40px;
 
+        position: absolute;
+        right: 0;
+
+        font-size: 24px;
+        cursor: pointer;
     }
 
     .gnb_search{
@@ -932,32 +925,22 @@ span.ent {
         background-color: #eee;
 
         box-sizing: border-box;
-        padding: 0 10px 0 40px;
+        padding: 0 40px 0 10px;
     }
+
 
     /* hover_content */
     .hover_content{
-        left: 190px;
-    }
-
-    .hover_inner{
         width: 1000px;
-        display: flex;
-
     }
 
     .gnb_banner{
         display: block;
-        background-color: #fff;
-        width: 290px; height: 200px;
-        padding: 5px 15px 0;
+        width: 280px; height: 200px;
         box-sizing: border-box;
+        padding: 5px;
 
-    }
 
-    .gnb_banner .img{
-        width: 260px;
-    }
 
 
 
