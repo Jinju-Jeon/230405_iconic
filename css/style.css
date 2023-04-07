@@ -178,7 +178,21 @@ ul.slick-dots li.slick-active button {
 }
 
 
+/* 본문 */
+.top_btn{
+    position: fixed;
+    bottom: 150px; right: 25px;
+    z-index: 99999;
+    
+    width: 40px; height: 40px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 50px;
 
+    opacity: .7;
+    background-color: #333;
+    color: #fff;
+}
 /********** header **********/
 .header{
     position: sticky;

@@ -94,7 +94,8 @@ li a:hover{color: #7D5A5A;}
 
 .pconly,
 .tablet,
-.search_cover {
+.search_cover,
+.page_number {
     display: none;
 }
 
@@ -136,47 +137,20 @@ p.more {
 }
 
 
-
-
-
-/***** slick 공통설정 *****/
-
-ul.slick-dots {
+/* 본문 */
+.top_btn{
+    position: fixed;
+    bottom: 150px; right: 25px;
+    z-index: 99999;
+    
+    width: 40px; height: 40px;
     text-align: center;
-}
+    padding: 5px;
+    border-radius: 50px;
 
-ul.slick-dots li {
-    display: inline-block;
-    margin-right: 15px;
-}
-
-ul.slick-dots li:last-child {
-    margin-right: 0;
-}
-
-ul.slick-dots li button {
-    width: 30px;
-    height: 15px;
-    border-radius: 2px;
-    font-size: 0;
-    background-color: #eee;
-    border: 1px solid #eee;
-}
-
-ul.slick-dots li.slick-active button {
-    background-color: #F3E1E1;
-    border: 1px solid #F1D1D1;
-
-}
-
-
-.slick-arrow {
-    position: absolute;
-    z-index: 99;
-    background: none;
-    opacity: 0;
-    font-size: 0;
-    top: 0;
+    opacity: .7;
+    background-color: #333;
+    color: #fff;
 }
 
 
@@ -544,7 +518,7 @@ ul.slick-dots li.slick-active button {
 
 /* mp_btn */
 .mp_btn{
-    margin-top: 30px;
+    margin: 30px 0 60px;
     display: block;
     width: 100%; height: 60px;
     text-align: center; line-height: 60px;
@@ -664,6 +638,26 @@ span.ent {
     .detail {
         width: calc((100% - 20px)/3);
     }
+
+    
+    /* page */
+    .page_number{
+        display: flex;
+        justify-content: center;
+    }
+    .page_number>div{
+        width: 25px; height: 25px;
+        text-align: center; line-height: 25px;
+        margin-right: 10px;
+        border: 1px solid #7D5A5A;
+        color: #7D5A5A;
+    }
+    .page_number>div:last-child{
+        margin-right: none;
+    }
+    
+
+
 
     
     .f_top {
@@ -852,22 +846,6 @@ span.ent {
     #pc_btn:checked ~ .header .fa-bars{display: none;}
     #pc_btn:checked ~ .header .fa-times{display: inline;}
 
-    /* page */
-    .page_number{
-        display: flex;
-        justify-content: center;
-    }
-    .page_number>div{
-        width: 25px; height: 25px;
-        text-align: center; line-height: 25px;
-        margin-right: 10px;
-        border: 1px solid #7D5A5A;
-        color: #7D5A5A;
-    }
-    .page_number>div:last-child{
-        margin-right: none;
-    }
-    
 
 
 
@@ -880,7 +858,8 @@ span.ent {
         display: none;
     }
 
-    .header_inner{
+    .header_inner,
+    .footer_inner{
         width: 1180px;
         margin: 0 auto;
     }
@@ -939,7 +918,7 @@ span.ent {
         display: block;
         width: 280px; height: 200px;
         box-sizing: border-box;
-        padding: 5px;
+        padding: 5px;}
 
 
 
