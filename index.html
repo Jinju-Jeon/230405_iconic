@@ -48,13 +48,13 @@
         </div>
 
         <ul class="pc_gnb pconly">
-            <li><a href="#">collection</a></li>
+            <li><a href="./sub">collection</a></li>
             <li><a href="./sub">stationery</a></li>
-            <li><a href="#">decoration</a></li>
-            <li><a href="#">fashion</a></li>
-            <li><a href="#">travel</a></li>
-            <li><a href="#">iconic</a></li>
-            <li><a href="#">board</a></li>
+            <li><a href="./sub">decoration</a></li>
+            <li><a href="./sub">fashion</a></li>
+            <li><a href="./sub">travel</a></li>
+            <li><a href="./sub">iconic</a></li>
+            <li><a href="./sub">board</a></li>
         </ul><!-- ////pc_gnb -->
 
         <div class="search_cover">
@@ -70,11 +70,7 @@
                     <i class="fas fa-bars"></i>
                     <i class="fas fa-times"></i>
                 </label>
-            </div>            
-            <label for="pc_btn">
-                <i class="fas fa-bars pconly"></i>
-                <i class="fas fa-times"></i>
-            </label>
+            </div>
         </div><!-- ////icon -->
 
         <div class="hover_content pconly">
@@ -181,7 +177,7 @@
                         <li><a href="#">BEST</a></li>
                     </ul>
                 </li>
-                <li><a href="#">STATIONERY
+                <li><a href="./sub">STATIONERY
                         <label for="btn_stationery" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
                         <label for="btn_stationery" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
                     </a>
@@ -193,7 +189,7 @@
                         <li><a href="#">pen&pencil case</a></li>
                     </ul>
                 </li>
-                <li><a href="#">DECORATION
+                <li><a href="./sub">DECORATION
                         <label for="btn_decoration" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
                         <label for="btn_decoration" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
                     </a>
@@ -204,7 +200,7 @@
                         <li><a href="#">gift wrapping</a></li>
                     </ul>
                 </li>
-                <li><a href="#">FASHION
+                <li><a href="./sub">FASHION
                         <label for="btn_fashion" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
                         <label for="btn_fashion" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
                     </a>
@@ -214,7 +210,7 @@
                         <li><a href="#">fashion accesory</a></li>
                     </ul>
                 </li>
-                <li><a href="#">TRAVEL
+                <li><a href="./sub">TRAVEL
                         <label for="btn_travel" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
                         <label for="btn_travel" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
                     </a>
@@ -224,7 +220,7 @@
                         <li><a href="#">travel accessory</a></li>
                     </ul>
                 </li>
-                <li><a href="#">ICONIC
+                <li><a href="./sub">ICONIC
                         <label for="btn_iconic" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
                         <label for="btn_iconic" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
                     </a>
@@ -235,7 +231,7 @@
                         <li><a href="#">B2B</a></li>
                     </ul>
                 </li>
-                <li class="gnb_mob_last"><a href="#">BOARD
+                <li class="gnb_mob_last"><a href="./sub">BOARD
                         <label for="btn_board" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
                         <label for="btn_board" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
                     </a>
@@ -258,7 +254,7 @@
 
 
     <div class="visual_main">
-        <div class="slider">
+        <div class="slider_a">
             <div>
                 <picture>
                     <source media="(min-width: 601px)" srcset="./img/main1.jpg">
@@ -295,7 +291,10 @@
     </div><!-- ////visual_main -->
 
     <section class="new">
-        <h1>NEW PRODUCT</h1>
+        <div class="title">
+            <h1>NEW PRODUCT</h1>
+            <p class="more"><a href="#">+More</a></p>
+        </div>
         <div class="slider">
             <div>
                 <!-- page1 -->
@@ -446,11 +445,13 @@
                 </div><!-- ////product -->
             </div><!-- page2 -->
         </div>
-        <p class="more"><a href="#">+More</a></p>
     </section><!-- ////new -->
 
     <section class="best">
-        <h1>BEST</h1>
+        <div class="title">
+            <h1>BEST</h1>        
+            <p class="more"><a href="#">+More</a></p>
+        </div>
         <div class="slider">
             <div>
                 <!-- page1 -->
@@ -601,17 +602,20 @@
             </div><!-- page2 -->
 
         </div><!-- ////slider -->
-        <p class="more"><a href="#">+More</a></p>
     </section><!-- ////best -->
 
     <section class="season">
-        <h1>VACATION</h1>
+        <div class="title">
+            <h1>VACATION</h1>
+            <p class="more"><a href="#">+More</a></p>
+        </div>
+
         <div class="season_list">
             <div class="season_inner1">
                 <div class="img">
                     <a href="#">
                         <picture>
-                            <source media="(min-width: 601px) and (max-width:1023px)" srcset="./img/va1_tablet.jpg">
+                            <source media="(min-width: 601px) and (max-width:1199px)" srcset="./img/va1_tablet.jpg">
                             <img src="./img/va1.jpg" alt="vacation1">
                         </picture>
                     </a>
@@ -632,12 +636,14 @@
             </div><!-- ////inner2 -->
         </div>
 
-        <p class="more"><a href="#">+More</a></p>
 
     </section><!-- ////season -->
 
     <section class="prom_item">
-        <h1>POUCH</h1>
+        <div class="title">
+            <h1>POUCH</h1>
+            <p class="more"><a href="#">+More</a></p>
+        </div>
         <div class="item_list">
             <div class="list_1 tablet">
                 <div class="img"><img src="./img/pouch1.jpg" alt="pouch1"></div>
@@ -653,7 +659,7 @@
             </div>
 
         </div>
-        <p class="more"><a href="#">+More</a></p>
+    
     </section>
 
     <section class="brand">
@@ -776,17 +782,25 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
     <script>
-        $(document).ready(function () {
+        
 
-            $('.slider').slick({
-                autoplay: true,
+        $(function(){
+
+        $('.slider').slick({
+                autoplay: false,
                 dots: true,
                 pauseOnDotsHover: true,
             });
 
 
+            $('.slider_a').slick({
+                autoplay: true,
+                dots: true,
+                pauseOnDotsHover: true,
+            });
 
-        });
+        })
+
     </script>
 
 </body>

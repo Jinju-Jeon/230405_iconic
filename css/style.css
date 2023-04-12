@@ -67,8 +67,22 @@ h1 {
     font-weight: bold;
     font-family: "IMB Plex Sans KR";
     color: #7D5A5A;
-    margin-bottom: 10px;
     text-transform: uppercase;
+    position: relative;
+}
+
+h1::before{
+    content: "";
+    
+    position: relative;
+    top: 8px;
+    float: left;
+
+    width: 15px;
+    height: 30px;
+    margin-right: 5px;
+    background-color: #7D5A5A;
+
 }
 
 h2 {
@@ -96,11 +110,29 @@ li a:hover{color: #7D5A5A;}
     display: none;
 }
 
+
+.title{
+    display: flex;
+    align-items:end;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
 p.more {
-    font-size: 20px;
-    margin-top: 5px;
+    font-family: "IMB Plex Sans KR";
+    font-size: 24px;
     text-align: right;
 }
+
+p.more a{
+    transition: .3s;
+    font-weight: 600;
+}
+
+p.more a:hover{
+    color: #7D5A5A;
+}
+
 
 .img {
     overflow: hidden;
@@ -152,21 +184,23 @@ ul.slick-dots li:last-child {
     margin-right: 0;
 }
 
+.slider ul.slick-dots{
+}
+
+
 ul.slick-dots li button {
-    width: 30px;
-    height: 15px;
+    width: 40px;
+    height: 20px;
     border-radius: 2px;
     font-size: 0;
-    background-color: #eee;
-    border: 1px solid #eee;
+    background-color: #F3E1E1;
+    border: 1px solid #F1D1D1;
 }
 
 ul.slick-dots li.slick-active button {
-    background-color: #F3E1E1;
-    border: 1px solid #F1D1D1;
-
+    background-color: #7D5A5A;
+    border: 1px solid #7D5A5A;
 }
-
 
 .slick-arrow {
     position: absolute;
@@ -181,10 +215,10 @@ ul.slick-dots li.slick-active button {
 /* 본문 */
 .top_btn{
     position: fixed;
-    bottom: 150px; right: 25px;
+    bottom: 75px; right: 25px;
     z-index: 99999;
     
-    width: 40px; height: 40px;
+    width: 45px; height: 45px;
     text-align: center;
     padding: 5px;
     border-radius: 50px;
@@ -432,18 +466,27 @@ ul.slick-dots li.slick-active button {
 .visual_main ul.slick-dots {
     width: 300px;
     position: absolute;
-    bottom: 30px;
+    bottom: 10%;
     transform: translateX(-50%);
     left: 50%;
 }
 
-.visual_main ul.slick-dots li button {
-    border: 1px solid #fff;
-    background-color: rgba(255, 255, 255, 0);
+.visual_main ul.slick-dots li{
+    margin-right: 30px;
+}
+.visual_main ul.slick-dots li:last-child{
+    margin-right: 0;
 }
 
-.visual_main ul.slick-dots li.slick-active button {
-    background-color: rgba(255, 255, 255, 1);
+.visual_main ul.slick-dots li button {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+.visual_main ul.slick-dots li.slick-active button {    
+    background-color: #7D5A5A;
 }
 
 
@@ -574,7 +617,11 @@ ul.slick-dots li.slick-active button {
 }
 
 .brand_txt h1 {
+    margin-bottom: 10px;
     color: #fff;
+}
+.brand_txt h1::before {
+    width: 0; height: 0;
 }
 
 .brand_txt p {
@@ -621,7 +668,7 @@ ul.slick-dots li.slick-active button {
 }
 
 .insta_inner {
-    width: 530px;
+    max-width: 530px;
     margin: 0 auto 80px;
 }
 
@@ -895,12 +942,12 @@ span.ent {
     /* gnb */
 
     .header .icon{
-        width: 80px;
+        width: 40px;
     }
     .i_cov1{display: none;}
 
     .pc_gnb{
-        width: 720px; height: 60px;
+        width: 760px; height: 60px;
         margin-right: 10px;
 
         display: flex;
@@ -914,7 +961,7 @@ span.ent {
         box-sizing: border-box;
         padding: 0 5px;
 
-        text-align: center; line-height: 60px;
+        text-align: left; line-height: 60px;
 
         font-family: "IMB Plex Sans KR";
         font-weight: bold;
@@ -941,7 +988,7 @@ span.ent {
 
 
     .hover_content{
-        width: 720px;
+        width: 760px;
         height: 60px;
 
         overflow: hidden;
@@ -960,7 +1007,7 @@ span.ent {
     }
 
     .gnb_sub{
-        width: 720px;
+        width: 760px;
         display: flex;
         justify-content: space-between
     }
@@ -1026,7 +1073,7 @@ span.ent {
     }
 
     .header .icon{
-        width: 40px;
+        width: 0px;
     }
 
     .pc_gnb{
@@ -1039,7 +1086,6 @@ span.ent {
         display: block;
         box-sizing: border-box;
         position: relative;
-        margin-right: 20px;
     }
 
     .search_submit{
@@ -1070,9 +1116,13 @@ span.ent {
         width: 1000px;
     }
 
+    .gnb_sub{
+        width: 760px;
+    }
+
     .gnb_banner{
         display: block;
-        width: 280px; height: 200px;
+        width: 240px; height: 200px;
         box-sizing: border-box;
         padding: 5px;
 
@@ -1186,6 +1236,7 @@ span.ent {
     }
     
     .insta_inner{
+        max-width: none;
         width: 580px;
     }
 
