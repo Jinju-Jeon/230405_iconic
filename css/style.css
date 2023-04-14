@@ -59,28 +59,29 @@ input[type=radio]{
 
 section {
     padding: 0 5px;
-    margin-bottom: 80px;
+    margin-bottom: 160px;
 }
 
 h1 {
+    white-space: nowrap;
     font-size: 32px;
     font-weight: bold;
     font-family: "IMB Plex Sans KR";
     color: #7D5A5A;
     text-transform: uppercase;
     position: relative;
+    padding-left: calc(10vw + 10px);
 }
 
 h1::before{
     content: "";
-    
-    position: relative;
-    top: 8px;
+    position: absolute;
+    top: 20px; left: 0;
     float: left;
 
-    width: 15px;
-    height: 30px;
-    margin-right: 5px;
+    width: 10vw;
+    max-width: 120px;
+    height: 5px;
     background-color: #7D5A5A;
 
 }
@@ -120,7 +121,7 @@ li a:hover{color: #7D5A5A;}
 
 p.more {
     font-family: "IMB Plex Sans KR";
-    font-size: 24px;
+    font-size: 20px;
     text-align: right;
 }
 
@@ -250,7 +251,6 @@ ul.slick-dots li.slick-active button {
 
 .logo{
     width: 170px;
-    margin-right: 10px;
 }
 
 .gnb_banner{
@@ -263,7 +263,7 @@ ul.slick-dots li.slick-active button {
 }
 
 .header .icon i{
-    width: 39px;
+    width: 40px;
     float: left;
     line-height: 60px;
     font-size: 28px;
@@ -460,7 +460,7 @@ ul.slick-dots li.slick-active button {
 
 .visual_main {
     overflow: hidden;
-    margin-bottom: 80px;
+    margin-bottom: 160px;
 }
 
 .visual_main ul.slick-dots {
@@ -481,6 +481,7 @@ ul.slick-dots li.slick-active button {
 .visual_main ul.slick-dots li button {
     width: 30px; height: 30px;
     border-radius: 50%;
+    opacity: 0.8;
     background-color: #fff;
     border: 2px solid #fff;
 }
@@ -617,6 +618,7 @@ ul.slick-dots li.slick-active button {
 }
 
 .brand_txt h1 {
+    padding: 0;
     margin-bottom: 10px;
     color: #fff;
 }
@@ -640,7 +642,7 @@ ul.slick-dots li.slick-active button {
 
 .insta {
     padding: 40px 0;
-    margin-bottom: 80px;
+    margin-bottom: 160px;
     background-color: #eee;
 }
 
@@ -897,12 +899,30 @@ span.ent {
 /* media 601px~ */
 
 
+@media all and (min-width:1200px) {
+    .mobonly{
+        display: none;
+    }
 
-@media all and (min-width:1000px){
-    .pconly {
+    .pconly{
         display: block;
     }
 
+    .header_inner{
+        width: 1180px;
+        margin: 0 auto;
+    }
+
+    section {
+        width: 1180px;
+        margin: 0 auto 100px;
+    }
+
+    h1{
+        padding-left: 130px;
+    }
+
+    
     /* lnb */
     .lnb_pc {
         background-color: #F3E1E1;
@@ -939,145 +959,20 @@ span.ent {
     }
 
 
-    /* gnb */
 
-    .header .icon{
-        width: 40px;
-    }
-    .i_cov1{display: none;}
-
-    .pc_gnb{
-        width: 760px; height: 60px;
-        margin-right: 10px;
-
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .pc_gnb li{
-        flex-grow: 1;}
-
-    .pc_gnb li a{  
-        box-sizing: border-box;
-        padding: 0 5px;
-
-        text-align: left; line-height: 60px;
-
-        font-family: "IMB Plex Sans KR";
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    .c_title::before,
-    .pc_gnb li a::before{
-        content: "+";
-    }
-
-    .c_title{
-        box-sizing: border-box;
-        padding: 0 5px;
-
-        text-align: center;
-        line-height: 0px; opacity: 0;
-
-        font-family: "IMB Plex Sans KR";
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-
-
-    .hover_content{
-        width: 760px;
-        height: 60px;
-
-        overflow: hidden;
-        transition: .3s;
-
-        position: absolute;
-        top: 0px; left: 185px;
-        z-index: -1;
-    }
-
-    .hover_inner{
-        display: flex;
-        position: relative;
-        top: 65px;
-        background-color: #fff;
-    }
-
-    .gnb_sub{
-        width: 760px;
-        display: flex;
-        justify-content: space-between
-    }
-
-    .category_sub{
-        box-sizing: border-box;
-        padding-left: 5px;
-        height: 200px;
-        transition: .3s;
-        flex-grow: 1;
-    }
-
-    .category_sub:hover{
-        background-color: #eee;
-    }
-
-
-    .gnb_sub a{
-        text-transform: capitalize;
-        padding: 5px;
-    }
-
-
-    #pc_btn:checked ~ .header .hover_content,
-    .pc_gnb:hover ~ .hover_content,
-    .hover_content:hover{
-        height: 265px;
-    }
-
-
-
-
-    
-    #pc_btn:checked ~ .header .fa-bars{display: none;}
-    #pc_btn:checked ~ .header .fa-times{display: inline;}
-
-
-
-
-
-
-
-
-
-
-
-}/* media 1000~ */
-
-
-@media all and (min-width:1200px) {
-    .mobonly {
-        display: none;
-    }
-
-    .header_inner{
-        width: 1180px;
-        margin: 0 auto;
-    }
-
-    section {
-        width: 1180px;
-        margin: 0 auto 100px;
-    }
-
+    /* header */
     .header .icon{
         width: 0px;
     }
 
+    .i_cov1{display: none;}
+
     .pc_gnb{
-        margin-right: 20px;
+        width: 760px; height: 60px;
+
+        display: flex;
+        justify-content: space-between;
+        margin: 0 10px;
     }
 
 
@@ -1114,10 +1009,33 @@ span.ent {
     /* hover_content */
     .hover_content{
         width: 1000px;
+        height: 60px;
+
+        overflow: hidden;
+        transition: .3s;
+
+        position: absolute;
+        top: 0px; left: 185px;
+        z-index: -1;
+    }
+
+    .hover_inner{
+        display: flex;
+        position: relative;
+        top: 65px;
+        background-color: #f0f0f0;
     }
 
     .gnb_sub{
         width: 760px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .gnb_sub a{
+        text-transform: capitalize;
+        padding: 5px;
     }
 
     .gnb_banner{
@@ -1125,9 +1043,56 @@ span.ent {
         width: 240px; height: 200px;
         box-sizing: border-box;
         padding: 5px;
-
-
     }
+
+    .c_title{
+        box-sizing: border-box;
+        padding: 0 5px;
+
+        text-align: center;
+        line-height: 0px; opacity: 0;
+
+        font-family: "IMB Plex Sans KR";
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .category_sub{
+        box-sizing: border-box;
+        padding-left: 5px;
+        height: 200px;
+        transition: .3s;
+        flex-grow: 1;
+    }
+
+    .category_sub:hover{
+        background-color: #fff;
+    }
+    .pc_gnb li{
+        flex-grow: 1;}
+
+    .pc_gnb li a{  
+        box-sizing: border-box;
+        padding: 0 5px;
+
+        text-align: left; line-height: 60px;
+
+        font-family: "IMB Plex Sans KR";
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .c_title::before,
+    .pc_gnb li a::before{
+        content: "+";
+    }
+
+
+    .pc_gnb:hover ~ .hover_content,
+    .hover_content:hover{
+        height: 265px;
+    }
+
 
 
     /* visual_main */
@@ -1176,16 +1141,6 @@ span.ent {
     .product>div{
         width: 280px;
     }
-
-
-
-
-
-
-
-
-
-
 
     /* season */
     .season_list {

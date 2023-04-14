@@ -62,7 +62,7 @@ input[type=radio]{
 
 section {
     padding: 0 5px;
-    margin-bottom: 80px;
+    margin-bottom: 160px;
 }
 
 h1 {
@@ -390,7 +390,7 @@ p.more {
 }
 
 .now_page{
-    margin: 40px auto;
+    margin: 80px auto 40px;
     overflow: hidden;
 }
 .now_page h1{
@@ -455,12 +455,12 @@ p.more {
     justify-content: space-between;
     flex-wrap: wrap;
     overflow: hidden;
-    height: calc((50vw + 55px)*4 + 210px);
+    height: calc((50vw + 55px)*4 + 240px + 60px);
 }
 
 .detail {
     width: calc((100% - 10px)/2);
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 
@@ -629,6 +629,7 @@ span.ent {
 
     .item_list{
         height: auto;
+        margin-bottom: 40px;
     }
 
     .mp_btn{
@@ -641,25 +642,43 @@ span.ent {
 
     
     /* page */
-    .page_number{
+    .page_number,
+    .page_number>div{
         display: flex;
         justify-content: center;
     }
-    .page_number>div{
+    .page_number>div>div{
         width: 25px; height: 25px;
         text-align: center; line-height: 25px;
-        margin-right: 10px;
         border: 1px solid #7D5A5A;
         color: #7D5A5A;
+        transition: .3s;
     }
-    .page_number>div:last-child{
-        margin-right: none;
+
+    .number_cover{
+        margin: 0 15px;
     }
+    .number_cover div{        
+        margin-right: 10px;
+    }
+    .number_cover div:last-child{
+        margin-right: 0;
+    }
+
+    .page_number>div>div:hover{
+        background-color: #eee;
+    }
+
+    .p_indc div:first-child{
+        margin-right: 5px;
+    }
+
+
     
 
 
 
-    
+    /* footer */
     .f_top {
         display: flex;
         flex-wrap: wrap;
@@ -690,10 +709,10 @@ span.ent {
         width: calc(50% - 5px);
     }
 
-    span.ent {
-        display: inline;
-        margin-right: 5px;
-    }
+span.ent {
+    display: inline;
+    margin-right: 5px;
+}
 
 
 
@@ -703,11 +722,30 @@ span.ent {
 /* media 601px~ */
 
 
-@media all and (min-width:1000px){
-    .pconly {
+@media all and (min-width:1200px) {
+    .mobonly{
+        display: none;
+    }
+
+    .pconly{
         display: block;
     }
 
+    .header_inner{
+        width: 1180px;
+        margin: 0 auto;
+    }
+
+    section {
+        width: 1180px;
+        margin: 0 auto 100px;
+    }
+
+    h1{
+        padding-left: 130px;
+    }
+
+    
     /* lnb */
     .lnb_pc {
         background-color: #F3E1E1;
@@ -744,137 +782,20 @@ span.ent {
     }
 
 
-    /* gnb */
 
+    /* header */
     .header .icon{
-        width: 80px;
+        width: 0px;
     }
+
     .i_cov1{display: none;}
 
     .pc_gnb{
-        width: 720px; height: 60px;
-        margin-right: 10px;
+        width: 760px; height: 60px;
 
         display: flex;
         justify-content: space-between;
-
-    }
-
-    .pc_gnb li{
-        flex-grow: 1;}
-
-    .pc_gnb li a{  
-        box-sizing: border-box;
-        padding: 0 5px;
-
-        text-align: center; line-height: 60px;
-
-        font-family: "IMB Plex Sans KR";
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    .c_title::before,
-    .pc_gnb li a::before{
-        content: "+";
-    }
-
-    .c_title{
-        box-sizing: border-box;
-        padding: 0 5px;
-
-        text-align: center;
-        line-height: 0px; opacity: 0;
-
-        font-family: "IMB Plex Sans KR";
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-
-
-    .hover_content{
-        width: 720px;
-        height: 60px;
-
-        overflow: hidden;
-        transition: .3s;
-
-        position: absolute;
-        top: 0px; left: 185px;
-        z-index: -1;
-    }
-
-    .hover_inner{
-        display: flex;
-        position: relative;
-        top: 65px;
-        background-color: #fff;
-    }
-
-    .gnb_sub{
-        width: 720px;
-        display: flex;
-        justify-content: space-between
-    }
-
-    .category_sub{
-        box-sizing: border-box;
-        padding-left: 5px;
-        height: 200px;
-        transition: .3s;
-        flex-grow: 1;
-    }
-
-    .category_sub:hover{
-        background-color: #eee;
-    }
-
-
-    .gnb_sub a{
-        text-transform: capitalize;
-        padding: 5px;
-    }
-
-
-    #pc_btn:checked ~ .header .hover_content,
-    .pc_gnb:hover ~ .hover_content,
-    .hover_content:hover{
-        height: 265px;
-    }
-    
-    #pc_btn:checked ~ .header .fa-bars{display: none;}
-    #pc_btn:checked ~ .header .fa-times{display: inline;}
-
-
-
-
-
-}/* media 990~ */
-
-
-@media all and (min-width:1200px) {
-    .mobonly {
-        display: none;
-    }
-
-    .header_inner,
-    .footer_inner{
-        width: 1180px;
-        margin: 0 auto;
-    }
-
-    section {
-        width: 1180px;
-        margin: 0 auto 100px;
-    }
-
-    .header .icon{
-        width: 40px;
-    }
-
-    .pc_gnb{
-        margin-right: 20px;
+        margin: 0 10px;
     }
 
 
@@ -883,7 +804,6 @@ span.ent {
         display: block;
         box-sizing: border-box;
         position: relative;
-        margin-right: 20px;
     }
 
     .search_submit{
@@ -912,17 +832,92 @@ span.ent {
     /* hover_content */
     .hover_content{
         width: 1000px;
+        height: 60px;
+
+        overflow: hidden;
+        transition: .3s;
+
+        position: absolute;
+        top: 0px; left: 185px;
+        z-index: -1;
+    }
+
+    .hover_inner{
+        display: flex;
+        position: relative;
+        top: 65px;
+        background-color: #f0f0f0;
+    }
+
+    .gnb_sub{
+        width: 760px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .gnb_sub a{
+        text-transform: capitalize;
+        padding: 5px;
     }
 
     .gnb_banner{
         display: block;
-        width: 280px; height: 200px;
+        width: 240px; height: 200px;
         box-sizing: border-box;
-        padding: 5px;}
+        padding: 5px;
+    }
+
+    .c_title{
+        box-sizing: border-box;
+        padding: 0 5px;
+
+        text-align: center;
+        line-height: 0px; opacity: 0;
+
+        font-family: "IMB Plex Sans KR";
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .category_sub{
+        box-sizing: border-box;
+        padding-left: 5px;
+        height: 200px;
+        transition: .3s;
+        flex-grow: 1;
+    }
+
+    .category_sub:hover{
+        background-color: #fff;
+    }
+    .pc_gnb li{
+        flex-grow: 1;}
+
+    .pc_gnb li a{  
+        box-sizing: border-box;
+        padding: 0 5px;
+
+        text-align: left; line-height: 60px;
+
+        font-family: "IMB Plex Sans KR";
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .c_title::before,
+    .pc_gnb li a::before{
+        content: "+";
+    }
 
 
+    .pc_gnb:hover ~ .hover_content,
+    .hover_content:hover{
+        height: 265px;
+    }
 
 
+    
 
     .detail {
         width: calc((100% - 60px)/4);
