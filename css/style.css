@@ -23,6 +23,7 @@ a {
     color: inherit;
     list-style: none;
     font-weight: normal;
+    overflow: hidden;
 }
 
 img,
@@ -136,7 +137,6 @@ p.more a:hover{
 
 
 .img {
-    overflow: hidden;
     position: relative;
     transition: scale .5s;
 }
@@ -162,10 +162,10 @@ p.more a:hover{
 }
 
 .detail:hover .whiteover,
-.blackover:hover {
+.blackover:hover,
+.brand:hover .blackover {
     opacity: 0.5;
 }
-
 
 
 
@@ -217,7 +217,7 @@ ul.slick-dots li.slick-active button {
 .top_btn{
     position: fixed;
     bottom: 75px; right: 25px;
-    z-index: 99999;
+    z-index: 9999;
     
     width: 45px; height: 45px;
     text-align: center;
@@ -232,7 +232,7 @@ ul.slick-dots li.slick-active button {
 .header{
     position: sticky;
     top: 0; z-index: 99999;
-
+                   
     width: 100%; height: 60px;
 
     background-color: #fff;
@@ -270,26 +270,14 @@ ul.slick-dots li.slick-active button {
     text-align: center;
 }
 
-/* mobile_btn */
-#mobile_btn:checked ~ .nav_mobile{
-    width: 100%;
-}
-#mobile_btn:checked ~ .header .icon .mobile_btn .fa-bars{display: none;}
-#mobile_btn:checked ~ .header .icon .mobile_btn .fa-times{display: inline;}
 
-.header .fa-times{
-    display: none;
-}
-
-
-
-
+/* nav_mobile */
 .nav_mobile{
     position: fixed;
-    transition: .2s;
     top: 60px; z-index: 9999;
     right: 0;
-    width: 0; height: 100%;
+    width: 100%; height: 100%;
+    display: none;
     overflow: hidden;
 }
 
@@ -332,50 +320,8 @@ ul.slick-dots li.slick-active button {
 }
 
 
-
-/* mobile gnb_check */
-#btn_collection:checked ~ .gnb_mobile li:nth-child(1) ul{height: 200px;}
-#btn_stationery:checked ~ .gnb_mobile li:nth-child(2) ul{height: 250px;}
-#btn_decoration:checked ~ .gnb_mobile li:nth-child(3) ul{height: 200px;}
-#btn_fashion:checked ~ .gnb_mobile li:nth-child(4) ul{height: 150px;}
-#btn_travel:checked ~ .gnb_mobile li:nth-child(5) ul{height: 150px;}
-#btn_iconic:checked ~ .gnb_mobile li:nth-child(6) ul{height: 200px;}
-#btn_board:checked ~ .gnb_mobile li:nth-child(7) ul{height: 150px;}
-
-#btn_collection:checked ~ .gnb_mobile li:nth-child(1)>a{border-bottom: 1px solid #7D5A5A}
-#btn_stationery:checked ~ .gnb_mobile li:nth-child(2)>a{border-bottom: 1px solid #7D5A5A}
-#btn_decoration:checked ~ .gnb_mobile li:nth-child(3)>a{border-bottom: 1px solid #7D5A5A}
-#btn_fashion:checked ~ .gnb_mobile li:nth-child(4)>a{border-bottom: 1px solid #7D5A5A}
-#btn_travel:checked ~ .gnb_mobile li:nth-child(5)>a{border-bottom: 1px solid #7D5A5A}
-#btn_iconic:checked ~ .gnb_mobile li:nth-child(6)>a{border-bottom: 1px solid #7D5A5A}
-#btn_board:checked ~ .gnb_mobile li:nth-child(7)>a{border-bottom: 1px solid #7D5A5A}
-
-#btn_collection:checked ~ .gnb_mobile li:nth-child(1) .gnb_close,
-#btn_stationery:checked ~ .gnb_mobile li:nth-child(2) .gnb_close,
-#btn_decoration:checked ~ .gnb_mobile li:nth-child(3) .gnb_close,
-#btn_fashion:checked ~ .gnb_mobile li:nth-child(4) .gnb_close,
-#btn_travel:checked ~ .gnb_mobile li:nth-child(5) .gnb_close,
-#btn_iconic:checked ~ .gnb_mobile li:nth-child(6) .gnb_close,
-#btn_board:checked ~ .gnb_mobile li:nth-child(7) .gnb_close{display: inline;}
-
-#btn_collection:checked ~ .gnb_mobile li:nth-child(1) .gnb_open,
-#btn_stationery:checked ~ .gnb_mobile li:nth-child(2) .gnb_open,
-#btn_decoration:checked ~ .gnb_mobile li:nth-child(3) .gnb_open,
-#btn_fashion:checked ~ .gnb_mobile li:nth-child(4) .gnb_open,
-#btn_travel:checked ~ .gnb_mobile li:nth-child(5) .gnb_open,
-#btn_iconic:checked ~ .gnb_mobile li:nth-child(6) .gnb_open,
-#btn_board:checked ~ .gnb_mobile li:nth-child(7) .gnb_open{display: none;}
-
-
-
-
 /* gnb */
-.gnb_mobile .gnb_close{
-    display: none;
-}
 
-
-.gnb_mobile{}
 .gnb_mobile label{
     display: block;
     float: right;
@@ -407,9 +353,8 @@ ul.slick-dots li.slick-active button {
 
 .gnb_mobile>li ul{
     width: calc(100% - 40px);
-    height: 0;
+    display: none;
     overflow: hidden;
-    transition: .3s;
 
     margin-left: auto;    
     border-left: 1px solid #7D5A5A;
@@ -556,12 +501,18 @@ ul.slick-dots li.slick-active button {
 
 
 /***** season *****/
-.season .season_inner1 {
-    overflow: hidden;
+.season .season_inner1 {}
+
+.img .hover_img{
+    position: absolute;
+    display: none;
+    background-color: #000;
+    top: 50%;
+    z-index: 9 ;
 }
 
 .season .season_inner1 .img:first-child {
-    margin-right: 10px;
+    margin-right: 10px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 }
 
 .season .season_inner1 .img {
@@ -598,11 +549,11 @@ ul.slick-dots li.slick-active button {
 
 .season img,
 .prom_item img{
-    transition: .3s;
+    transition: transform .3s;
 }
-.season .img:hover img,
-.prom_item .img:hover img{
-    transform: scale(1.1);
+.season .img:hover a img,
+.prom_item .img:hover a img{
+    transform: scale(1.05);
 }
 
 

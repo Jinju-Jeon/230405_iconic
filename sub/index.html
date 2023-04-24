@@ -4,11 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=2.0,  user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=1.0, maximum-scale=2.0,  user-scalable=no">
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.3/jquery.scrollTo.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+
     <title>Iconic</title>
 </head>
 
@@ -69,7 +74,6 @@
                     <i class="fas fa-shopping-cart"></i>
                     <label for="mobile_btn" class="mobile_btn">
                         <i class="fas fa-bars"></i>
-                        <i class="fas fa-times"></i>
                     </label>
                 </div> 
             </div><!-- ////icon -->
@@ -168,8 +172,7 @@
             <ul class="gnb_mobile">
                 <li>
                     <a href="#">COLLECTION
-                        <label for="btn_collection" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
-                        <label for="btn_collection" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                        <label for="btn_collection" class="gnb_btn"><i class="fas fa-chevron-down"></i></label>
                     </a>
                     <ul>
                         <li><a href="#">NEW</a></li>
@@ -179,8 +182,7 @@
                     </ul>
                 </li>
                 <li><a href="#">STATIONERY
-                        <label for="btn_stationery" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
-                        <label for="btn_stationery" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                        <label for="btn_stationery" class="gnb_btn"><i class="fas fa-chevron-down"></i></label>
                     </a>
                     <ul>
                         <li><a href="#">diary&planner</a></li>
@@ -191,8 +193,7 @@
                     </ul>
                 </li>
                 <li><a href="#">DECORATION
-                        <label for="btn_decoration" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
-                        <label for="btn_decoration" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                        <label for="btn_decoration" class="gnb_btn"><i class="fas fa-chevron-down"></i></label>
                     </a>
                     <ul>
                         <li><a href="#">Sticker</a></li>
@@ -202,8 +203,7 @@
                     </ul>
                 </li>
                 <li><a href="#">FASHION
-                        <label for="btn_fashion" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
-                        <label for="btn_fashion" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                        <label for="btn_fashion" class="gnb_btn"><i class="fas fa-chevron-down"></i></label>
                     </a>
                     <ul>
                         <li><a href="#">wallet</a></li>
@@ -212,8 +212,7 @@
                     </ul>
                 </li>
                 <li><a href="#">TRAVEL
-                        <label for="btn_travel" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
-                        <label for="btn_travel" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                        <label for="btn_travel" class="gnb_btn"><i class="fas fa-chevron-down"></i></label>
                     </a>
                     <ul>
                         <li><a href="#">bag</a></li>
@@ -222,8 +221,7 @@
                     </ul>
                 </li>
                 <li><a href="#">ICONIC
-                        <label for="btn_iconic" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
-                        <label for="btn_iconic" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                        <label for="btn_iconic" class="gnb_btn"><i class="fas fa-chevron-down"></i></label>
                     </a>
                     <ul>
                         <li><a href="#">identity</a></li>
@@ -233,8 +231,7 @@
                     </ul>
                 </li>
                 <li class="gnb_mob_last"><a href="#">BOARD
-                        <label for="btn_board" class="gnb_open"><i class="fas fa-chevron-down"></i></label>
-                        <label for="btn_board" class="gnb_close"><i class="fas fa-chevron-up"></i></label>
+                        <label for="btn_board" class="gnb_btn"><i class="fas fa-chevron-down"></i></label>
                     </a>
                     <ul>
                         <li><a href="#">NEWS</a></li>
@@ -279,8 +276,8 @@
     </section>
 
     <section class="item">
-        <input type="checkbox" id="mp_btn">
         <div class="item_list">
+        <div class="list_split">
             <div class="detail">
                 <a href="#">
                     <div class="img">
@@ -416,12 +413,14 @@
                         </p>
                     </div>
                 </a>
-            </div><!-- 8th -->
+            </div>
+        </div>
 
-            <label for="mp_btn" class="mp_btn">
+            <span class="mp_btn">
                 More <i class="fas fa-chevron-down"></i>
-            </label>            
+            </span>            
 
+            <div class="list_split">
             <div class="detail">
                 <a href="#">
                     <div class="img">
@@ -558,10 +557,11 @@
                     </div>
                 </a>
             </div>
+        </div>
 
         </div>
 
-        <div class="page_number tablet">
+        <div class="page_number pconly">
             <div class="page_prev p_indc">
                 <div><a href="#"><i class="fas fa-angle-double-left"></i></a></div>
                 <div><a href="#"><i class="fas fa-angle-left"></i></a></div>
@@ -638,6 +638,82 @@
             </div>
         </div>
     </footer><!-- ////footer -->
+    
+
+    <script>
+        $(function(){  
+
+            $('.top_btn').click(function(e){
+                e.preventDefault()
+                $('.header').stop().fadeIn(300)
+                $(window).scrollTo(this.hash || 0 ,500)
+            })
+
+            $('.mobile_btn').click(function(){
+                $(this).children('i').toggleClass('fa-times').toggleClass('fa-bars')
+                $('.nav_mobile').stop().fadeToggle(200)
+            })
+
+            $('.nav_black').click(function(){
+                $('.mobile_btn').children('i').toggleClass('fa-times').toggleClass('fa-bars')
+                $('.nav_mobile').stop().fadeToggle(200)
+            })
+            
+            
+            let stateArray = [0,0,0,0,0,0,0];
+            $('.gnb_mobile>li label').click(function(){
+                let liW = $('.gnb_mobile>li')
+                let li = $(this).parents('li')
+                let i = li.index() 
+
+                li.children('a').css('border-bottom','1px solid #7D5A5A')
+               
+                if(stateArray[i]===0){
+                    stateArray = [0,0,0,0,0,0,0]
+                    liW.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down')
+                    liW.children('a').stop().animate({borderBottomWidth:0},300)
+                    liW.find('ul').stop().slideUp(300)
+
+                    $(this).children('i').toggleClass('fa-chevron-down').toggleClass('fa-chevron-up')                
+                    li.find('ul').stop().slideDown(300)
+                    li.children('a').stop().css('border-bottom','1px solid #7D5A5A')
+                    stateArray[i]=1
+                }
+                else{
+                    liW.find('i').removeClass('fa-chevron-up').addClass('fa-chevron-down')
+                    liW.children('a').stop().animate({borderBottomWidth:0},300)
+                    liW.find('ul').stop().slideUp(300)
+                    stateArray[i]=0
+                }
+            }) //gnb_mobile
+
+
+
+
+            $(window).mousewheel(function(e,d){
+               let position = $(window).scrollTop();
+
+                if(position>0){
+                    if(d>0){$('.header').stop().fadeIn(300)}
+                    else {$('.header').stop().fadeOut(300)}
+                }else{
+                    $('.header').stop().css('display','block').css('opacity','1')
+                }
+            }) 
+
+            $('.img').css('display','none')
+            $('.img').fadeIn(500)
+
+            $('.mp_btn').click(function(){
+                $('.mp_btn').css('display','none')
+                $('.list_split').slideDown(300)
+                $('.list_split').css('display','flex')
+            })
+                
+                
+
+        })
+
     </script>
 
 </body>
