@@ -12,14 +12,7 @@ html {
     color: #333;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
-a {
+h1,h2,h3,h4,h5,h6,li,a {
     text-decoration: none;
     font-size: inherit;
     color: inherit;
@@ -46,8 +39,6 @@ input::-webkit-search-results-decoration{
 .now_list::-webkit-scrollbar{
     display: none;
 }
-
-
 
 input,
 button {
@@ -86,7 +77,6 @@ h2 {
 
 a {display: block;}
 p a {display: inline;}
-li a:hover{color: #7D5A5A;}
 
 .gray {
     color: #aaa;
@@ -100,7 +90,6 @@ li a:hover{color: #7D5A5A;}
 }
 
 .img {
-    overflow: hidden;
     position: relative;
     transition: scale .5s;
 }
@@ -161,6 +150,8 @@ li a:hover{color: #7D5A5A;}
     border-bottom: 1px solid #aaa;
 
 }
+
+.header li a:hover{color: #7D5A5A;}
 
 .header_inner{
     display: flex;
@@ -391,12 +382,7 @@ li a:hover{color: #7D5A5A;}
 }
 
 
-
 /* item */
-
-.item_list {
-    overflow: hidden;
-}
 
 .list_split{
     display: flex;
@@ -435,7 +421,13 @@ li a:hover{color: #7D5A5A;}
 }
 
 .detail_bottom {
-    overflow: hidden;
+    position: relative;
+}
+
+.detail_bottom::after{
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .detail_bottom .price {
@@ -450,9 +442,13 @@ li a:hover{color: #7D5A5A;}
     float: right;
 }
 
-.detail_bottom .icon i {
+.detail_bottom button{
     float: left;
     display: block;
+    background: none;
+}
+
+.detail_bottom .icon i {
     font-size: 24px;
     transition: .2s;
 }
@@ -471,6 +467,24 @@ li a:hover{color: #7D5A5A;}
 
 
 
+.cff7{
+    color: #ff747b;}
+
+.detail_bottom .action{
+    font-size: 14px;
+    position: absolute;
+    z-index: 99;
+    text-align: center;
+    top: -40px; right: -65px;
+    width: 130px; box-sizing: border-box;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+
+}
+
+
+
 /* mp_btn */
 .mp_btn{
     margin: 30px 0 60px;
@@ -480,6 +494,16 @@ li a:hover{color: #7D5A5A;}
     border: 1px solid  #7D5A5A;
     color: #7D5A5A;
     box-sizing: border-box;
+}
+
+
+.img .hover_img{
+    position: absolute;
+    display: none;
+    background-color: #000;
+    z-index: 9 ;
+    top: -50%;
+    left: 30%;
 }
 
 
@@ -829,6 +853,10 @@ span.ent {
 
     .mp_btn{
         display: none;
+    }
+
+    .list_split{
+        display: flex;
     }
 
     

@@ -10,21 +10,14 @@ html {
     color: #333;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-li,
-a {
+h1,h2,h3,h4,h5,h6,li,a {
     text-decoration: none;
     font-size: inherit;
     color: inherit;
     list-style: none;
     font-weight: normal;
-    overflow: hidden;
 }
+
 
 img,
 picture {
@@ -446,7 +439,7 @@ ul.slick-dots li.slick-active button {
 
 .product>div {
     width: calc(50% - 5px);
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .product_name {
@@ -465,7 +458,13 @@ ul.slick-dots li.slick-active button {
 }
 
 .detail_bottom {
-    overflow: hidden;
+    position: relative;
+}
+
+.detail_bottom::after{
+    clear: both;
+    content: "";
+    display: block;
 }
 
 .detail_bottom .price {
@@ -480,9 +479,13 @@ ul.slick-dots li.slick-active button {
     float: right;
 }
 
-.detail_bottom .icon i {
+.detail_bottom button{
     float: left;
     display: block;
+    background: none;
+}
+
+.detail_bottom .icon i {
     font-size: 24px;
     transition: .2s;
 }
@@ -492,23 +495,54 @@ ul.slick-dots li.slick-active button {
 }
 
 .detail_bottom .icon i.fa-heart:hover {
-    color: rgb(255, 116, 123);
+    color: #ff747b;
 }
 
 .detail_bottom .icon i.fa-cart-plus:hover {
     color: #777;
 }
 
+.cff7{
+    color: #ff747b;}
+
+.detail_bottom .action{
+    font-size: 14px;
+    position: absolute;
+    z-index: 99;
+    text-align: center;
+    top: -40px; right: -65px;
+    width: 130px; box-sizing: border-box;
+    padding: 5px 10px;
+    background-color: #fff;
+    border: 1px solid #aaa;
+
+}
+
+
+
+
 
 /***** season *****/
-.season .season_inner1 {}
+.season a,
+.prom_item a
+{overflow: hidden;}
+
+.season::after{
+    content: "";
+    display: block;
+    clear: both;
+}
 
 .img .hover_img{
     position: absolute;
     display: none;
     background-color: #000;
-    top: 50%;
+    bottom: 30%; left: 25%;
     z-index: 9 ;
+}
+
+.hover_img img{
+    display: none;
 }
 
 .season .season_inner1 .img:first-child {
@@ -581,10 +615,10 @@ ul.slick-dots li.slick-active button {
     line-height: 2;
 }
 
-.brand_txt p:last-child {
-    font-size: 24px;
+.brand_txt p i {
+    font-size: 28px;
     position: absolute;
-    bottom: 10px; right: 10px;
+    right: 10px; bottom: 10px;
 }
 
 
@@ -1064,6 +1098,7 @@ span.ent {
 
     .visual_main:hover .slick-arrow {
         background: rgba(0, 0, 0, 0.8);
+        cursor: pointer;
     }
 
 
@@ -1089,11 +1124,18 @@ span.ent {
 
 
 
+
     .product>div{
         width: 280px;
     }
 
     /* season */
+    
+
+    .hover_img img{
+        display: block;
+    }
+
     .season_list {
         display: flex;
         flex-wrap: wrap;
@@ -1208,3 +1250,49 @@ span.ent {
 
 /* media 1200px~ */
 
+
+
+@media all and (min-width:1310px){
+
+    .new .slick-arrow,
+    .best .slick-arrow {
+        opacity: 1;
+        top: 140px;
+        margin-top: -25px;
+        width: 40px;
+        height: 40px;
+        transition: .2s;
+        border-radius: 50%;
+        color: #333;
+        border: 1px solid #333;
+    }
+
+    .new:hover .slick-arrow,
+    .best:hover .slick-arrow {
+        cursor: pointer;
+    }
+
+
+    .new .slick-arrow.slick-prev:hover,
+    .new .slick-arrow.slick-next:hover,
+    .best .slick-arrow.slick-next:hover{background: #eee;}
+    
+    .new .slick-arrow.slick-prev,
+    .best .slick-arrow.slick-prev {left: -55px;}
+    .new .slick-arrow.slick-next,
+    .best .slick-arrow.slick-next {right: -55px;}
+
+    .new .slick-arrow.slick-prev::after,
+    .best .slick-arrow.slick-prev::after {
+        content: "〈";
+        font-size: 20px;
+        margin-left: -3px;
+    }
+
+    .new .slick-arrow.slick-next::after,
+    .best .slick-arrow.slick-next::after {
+        content: "〉";
+        font-size: 20px;
+        margin-right: -3px;
+    }
+}/* 1340~ */
