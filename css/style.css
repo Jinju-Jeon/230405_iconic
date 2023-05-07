@@ -410,18 +410,18 @@ ul.slick-dots li.slick-active button {
 }
 
 .visual_main ul.slick-dots li{
-    margin-right: 30px;
+    margin-right: 20px;
 }
 .visual_main ul.slick-dots li:last-child{
     margin-right: 0;
 }
 
 .visual_main ul.slick-dots li button {
-    width: 30px; height: 30px;
+    width: 15px; height: 15px;
     border-radius: 50%;
     opacity: 0.8;
+    border: none;
     background-color: #fff;
-    border: 2px solid #fff;
 }
 
 .visual_main ul.slick-dots li.slick-active button {    
@@ -627,7 +627,7 @@ ul.slick-dots li.slick-active button {
 
 .insta {
     padding: 40px 0;
-    margin-bottom: 160px;
+    margin-bottom: 120px;
     background-color: #eee;
 }
 
