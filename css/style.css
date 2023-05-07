@@ -53,7 +53,7 @@ input[type=radio]{
 
 section {
     padding: 0 5px;
-    margin-bottom: 160px;
+    margin-bottom: 120px;
 }
 
 h1 {
@@ -398,7 +398,7 @@ ul.slick-dots li.slick-active button {
 
 .visual_main {
     overflow: hidden;
-    margin-bottom: 160px;
+    margin-bottom: 120px;
 }
 
 .visual_main ul.slick-dots {
