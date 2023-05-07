@@ -693,24 +693,36 @@
                 </div>
             </div>
             <div class="insta_img">
+                <a href="https://www.instagram.com/p/Cp4GrgoBIv6/">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns1.jpg" alt="sns1">
                 </div>
+                </a>
+                <a href="https://www.instagram.com/p/CpzC5rMPFtg/">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns2.jpg" alt="sns2">
                 </div>
+                </a>
+                <a href="https://www.instagram.com/p/CpwsREshsoY/">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns3.jpg" alt="sns3">
                 </div>
+                </a>
+                <a href="https://www.instagram.com/p/CptduDshK2m/">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns4.jpg" alt="sns4">
                 </div>
+                </a>
+                <a href="https://www.instagram.com/p/CpeypSEBAo9/">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns5.jpg" alt="sns5">
                 </div>
+                </a>
+                <a href="https://www.instagram.com/p/CpTudFRBqf0/">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns6.jpg" alt="sns6">
                 </div>
+                </a>
             </div>
         </div>
     </div><!-- ////insta -->
@@ -857,23 +869,26 @@
 
             
             $('.season .img').mouseenter(function(){
-                $(this).prepend('<div class="hover_img img"><img>')
-                $(this).find('a').find('img').css('opacity','.5')
+                $(this).prepend('<div class=hover_img img><img>')
+                $(this).children('a').find('img').css('opacity','.5')
             
             
                 let src = $(this).find('a').find('img').attr('src')
                 let new_src = src.replace('.jpg','_2.jpg')
+                let href = $(this).children('a').attr('href')
                 let width = ($('.hover_img').next('a').find('img').width())*1.2
 
                 $('.hover_img').css('width',width).css('max-width','360px')
                 $('.hover_img img').attr('src',new_src)
+
+                $(this).find('.hover_img').wrap('<a class="hoverlink" href='+href+'>')
                 
                 $('.hover_img').stop().delay(50).fadeIn(200)
             })
             
             $('.season .img').mouseleave(function(){
                 $(this).find('a').find('img').css('opacity','1')
-                $(this).find('.hover_img').remove()
+                $(this).find('.hoverlink').remove()
             })
 
             
@@ -881,22 +896,26 @@
             
             $('.prom_item .img').mouseenter(function(){
                 $(this).prepend('<div class=hover_img img><img>')
-                $(this).find('a').find('img').css('opacity','.5')
+                $(this).children('a').find('img').css('opacity','.5')
             
             
                 let src = $(this).find('a').find('img').attr('src')
                 let new_src = src.replace('.jpg','_2.jpg')
+                let href = $(this).children('a').attr('href')
                 let width = ($('.hover_img').next('a').find('img').width())*1.2
 
                 $('.hover_img').css('width',width).css('max-width','360px')
                 $('.hover_img img').attr('src',new_src)
+
+                $(this).find('.hover_img').wrap('<a class="hoverlink" href='+href+'>')
+                
                 $('.hover_img').stop().delay(50).fadeIn(200)
 
             })
             
             $('.prom_item .img').mouseleave(function(){
                 $(this).find('a').find('img').css('opacity','1')
-                $(this).find('.hover_img').remove()
+                $(this).find('.hoverlink').remove()
             })
 
 
@@ -927,19 +946,12 @@
             $('.new .detail').animate({opacity : 1},500)
             
             $('.best .detail').css('opacity',0)
-            $('.season_list').css('opacity',0)
-            $('.prom_item .item_list').css('opacity',0)
             $('.brand').css('opacity',0)
-            $('.insta').css('opacity',0)
             
             $(window).scroll(function(){
                 appear($('.best'),$('.best .detail'))
-                appear($('.season'),$('.season_list'))
-                appear($('.prom_item'),$('.prom_item .item_list'))
                 appear($('.brand'),$('.brand'))
-                appear($('.insta'),$('.insta'))
             })
-
             function appear(a,b){
                 let y = $(window).scrollTop()
 
@@ -948,6 +960,68 @@
                 }
                 
             }
+            
+
+
+
+            $('.season_inner1').children('.img').css('opacity','0')
+            $('.season_inner2').children('.img').css('opacity','0')
+
+            $('.item_list .list_1').find('.img').css('opacity','0')
+            $('.item_list .list_2').find('.img').css('opacity','0')
+
+            $('.insta_img a').css('opacity',0)
+
+            $(window).scroll(function(){
+                let y = $(window).scrollTop()
+                let a = $('.season').offset().top
+                if(y > a-1000){
+                    $('.season_inner1').children('.img').eq(1).delay(200).animate({opacity:1},400)
+                    $('.season_inner1').children('.img').eq(0).animate({opacity:1},400,function(){
+
+                    let arr = $('.season_inner2').children('.img')
+                    let img = $('.season_inner2').children('.img')
+                    for(let i in arr){
+                        let count = (i)*200
+                        img.eq(i).delay(count).animate({opacity:1},400)
+                    }
+                    })//animate&callback
+                } //if
+         
+                let b = $('.item_list').offset().top
+                if(y > b-1000){
+                    $('.list_1').children('.img').eq(0).animate({opacity:1},400)
+                    $('.list_1').children('.img').eq(1).delay(200).animate({opacity:1},400)
+
+                    let arr = $('.item_list .list_2').children('.img')
+                    let img = $('.item_list .list_2').children('.img')
+                    for(let i in arr){
+                        let count = (i)*200
+                        img.eq(i).delay(count).animate({opacity:1},400)
+                    }
+                } //if
+         
+                let c = $('.insta_img').offset().top
+                if(y > c-1000){
+                    let arr = $('.insta_img a')
+                    let img = $('.insta_img a')
+                    for(let i in arr){
+                        let count = (i)*200
+                        img.eq(i).delay(count).animate({opacity:1},400)
+                    }
+
+                }
+
+
+
+
+
+
+
+            })//scrollfunction
+
+
+
 
             
 

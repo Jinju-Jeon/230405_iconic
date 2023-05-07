@@ -488,6 +488,7 @@ ul.slick-dots li.slick-active button {
 .detail_bottom .icon i {
     font-size: 24px;
     transition: .2s;
+    cursor: pointer;
 }
 
 .detail_bottom .icon i.fa-heart {
@@ -665,13 +666,13 @@ ul.slick-dots li.slick-active button {
     flex-wrap: wrap;
 }
 
-.insta_img .img {
+.insta_img a {
     width: calc((100% - 20px)/3);
     margin-right: 10px;
     margin-bottom: 10px;
 }
 
-.insta_img .img:nth-child(3n) {
+.insta_img a:nth-child(3n) {
     margin-right: 0;
 }
 

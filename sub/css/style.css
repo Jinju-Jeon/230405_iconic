@@ -451,6 +451,7 @@ p a {display: inline;}
 .detail_bottom .icon i {
     font-size: 24px;
     transition: .2s;
+    cursor: pointer;
 }
 
 .detail_bottom .icon i.fa-heart {
