@@ -693,32 +693,32 @@
                 </div>
             </div>
             <div class="insta_img">
-                <a href="https://www.instagram.com/p/Cp4GrgoBIv6/">
+                <a href="https://www.instagram.com/p/Cp4GrgoBIv6/" target="_blank">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns1.jpg" alt="sns1">
                 </div>
                 </a>
-                <a href="https://www.instagram.com/p/CpzC5rMPFtg/">
+                <a href="https://www.instagram.com/p/CpzC5rMPFtg/" target="_blank">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns2.jpg" alt="sns2">
                 </div>
                 </a>
-                <a href="https://www.instagram.com/p/CpwsREshsoY/">
+                <a href="https://www.instagram.com/p/CpwsREshsoY/" target="_blank">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns3.jpg" alt="sns3">
                 </div>
                 </a>
-                <a href="https://www.instagram.com/p/CptduDshK2m/">
+                <a href="https://www.instagram.com/p/CptduDshK2m/" target="_blank">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns4.jpg" alt="sns4">
                 </div>
                 </a>
-                <a href="https://www.instagram.com/p/CpeypSEBAo9/">
+                <a href="https://www.instagram.com/p/CpeypSEBAo9/" target="_blank">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns5.jpg" alt="sns5">
                 </div>
                 </a>
-                <a href="https://www.instagram.com/p/CpTudFRBqf0/">
+                <a href="https://www.instagram.com/p/CpTudFRBqf0/" target="_blank">
                 <div class="img">
                     <div class="blackover"></div><img src="./img/sns6.jpg" alt="sns6">
                 </div>
@@ -975,7 +975,7 @@
             $(window).scroll(function(){
                 let y = $(window).scrollTop()
                 let a = $('.season').offset().top
-                if(y > a-1000){
+                if(y > a-800){
                     $('.season_inner1').children('.img').eq(1).delay(200).animate({opacity:1},400)
                     $('.season_inner1').children('.img').eq(0).animate({opacity:1},400,function(){
 
@@ -989,7 +989,7 @@
                 } //if
          
                 let b = $('.item_list').offset().top
-                if(y > b-1000){
+                if(y > b-800){
                     $('.list_1').children('.img').eq(0).animate({opacity:1},400)
                     $('.list_1').children('.img').eq(1).delay(200).animate({opacity:1},400)
 
@@ -1002,7 +1002,7 @@
                 } //if
          
                 let c = $('.insta_img').offset().top
-                if(y > c-1000){
+                if(y > c-800){
                     let arr = $('.insta_img a')
                     let img = $('.insta_img a')
                     for(let i in arr){
