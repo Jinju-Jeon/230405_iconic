@@ -1,3 +1,5 @@
+![project1_main](https://github.com/Jinju-Jeon/230428_iconic/assets/122503637/e6378838-57ed-4daf-a19c-1bf6449969d5)
+
 # 230428_iconic
 -모바일 / 태블릿 / PC 화면 크기 별로 레이아웃이 변화하는 반응형으로 제작되었습니다.
 
