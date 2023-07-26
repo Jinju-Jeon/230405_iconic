@@ -256,7 +256,8 @@ ul.slick-dots li.slick-active button {
 }
 
 .header .icon i{
-    width: 40px;
+    cursor: pointer;
+    width: 39px;
     float: left;
     line-height: 60px;
     font-size: 28px;

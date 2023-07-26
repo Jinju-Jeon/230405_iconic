@@ -642,6 +642,24 @@
 
     <script>
         $(function(){  
+            let prevScroll = 0
+            const header = $('.header')
+            console.log(header)
+            window.addEventListener("scroll",function(){
+                if(window.scrollY>0){
+                    if(window.scrollY>prevScroll){
+                        header.stop().animate({
+                            opacity: 0
+                        },150).css('pointer-events','none')
+                    } else if(window.scrollY<prevScroll){
+
+                        header.stop().animate({
+                            opacity: 1
+                        },150).css('pointer-events','auto')
+                    }
+                    prevScroll = window.scrollY
+                } 
+            }) //scrollevent
 
             $('.top_btn').click(function(e){
                 e.preventDefault()
@@ -686,16 +704,6 @@
                     stateArray[i]=0
                 }
             }) //gnb_mobile
-
-
-
-
-            $(window).mousewheel(function(e,d){
-               let position = $(window).scrollTop();
-                if(d>0){$('.header').stop().fadeIn(300)}
-                else {$('.header').stop().fadeOut(300)}
-                
-            }) 
 
 
 

@@ -177,6 +177,7 @@ p a {display: inline;}
 }
 
 .header .icon i{
+    cursor: pointer;
     width: 39px;
     float: left;
     line-height: 60px;

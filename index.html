@@ -795,6 +795,27 @@
 
         $(function(){
 
+        let prevScroll = 0
+        const header = $('.header')
+        console.log(header)
+        window.addEventListener("scroll",function(){
+            if(window.scrollY>0){
+                if(window.scrollY>prevScroll){
+                    header.stop().animate({
+                        opacity: 0
+                    },150).css('pointer-events','none')
+                } else if(window.scrollY<prevScroll){
+                    
+                    header.stop().animate({
+                        opacity: 1
+                    },150).css('pointer-events','auto')
+                }
+                prevScroll = window.scrollY
+            } 
+        }) //scrollevent
+
+
+
         $('.slider').slick({
                 autoplay: false,
                 dots: true,
@@ -852,19 +873,6 @@
                     stateArray[i]=0
                 }
             }) //gnb_mobile
-
-
-
-            $(window).mousewheel(function(e,d){
-               let position = $(window).scrollTop();
-
-                if(position>0){
-                    if(d>0){$('.header').stop().slideDown(200)}
-                    else {$('.header').stop().slideUp(200)}
-                }else{
-                    $('.header').stop().css('display','block').css('opacity','1')
-                }                
-            }) 
 
 
             
